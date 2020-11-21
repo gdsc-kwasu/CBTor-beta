@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.row {
+    background-color: teal;
+    width: 100%;
+    text-align: center;
+}
+
+h1 {
+    color: #ffffff;
+    text-transform: uppercase;
+    width: 100%;
+}
