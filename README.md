@@ -43,7 +43,7 @@ npm install
 cp .env.example .env
 ```
 
-- Start the development server, \_and start developing.
+- Start the development server at `localhost:5500` and start developing.
 
 ```npm
 npm run dev
