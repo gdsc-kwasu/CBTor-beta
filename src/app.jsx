@@ -1,15 +1,23 @@
+/** @format */
+
 import React from "react";
 import ReactDOM from "react-dom";
-import "./styles/style.css";
+import { Provider } from "react-redux";
+import "./assets/styles/app.scss";
+import store from "./redux/store";
+import { saveState } from "./redux/localStorage"
+import Index from "./pages/Index";
+import Alert from "./utilities/Alert";
 
-const App = () => {
-    return (
-        <div className="container">
-            <div className="row">
-                <h1>Hello react!</h1>
-            </div>
-        </div>
-    );
-};
+store.subscribe(() => {
+  saveState(store.getState());
+});
 
-ReactDOM.render(<App />, document.querySelector("#root"));
+ReactDOM.render(
+  <Provider store={store}>
+    <Alert>
+      <Index />
+    </Alert>
+  </Provider>,
+  document.querySelector("#root")
+);
