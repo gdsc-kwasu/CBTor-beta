@@ -1,19 +1,11 @@
 /** @format */
 
-@import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
-* {
-  box-sizing: border-box;
-}
+// Partials
+@import "./partials/index.scss";
 
-html {
-  font-family: "Oxygen", sans-serif;
-  margin-bottom: 0;
-}
-
-.app {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+// Main files
+@import "./partials/resets";
+@import "./global.scss";

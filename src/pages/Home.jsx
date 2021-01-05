@@ -4,7 +4,11 @@ import React, { Component } from "react";
 
 class Home extends Component {
   render() {
-    return <h1 className="app">CBTor is coming</h1>;
+    return (
+      <div className="vw-100 vh-100 d-center">
+        <h1 className="text-primary">CBTor is coming back</h1>
+      </div>
+    );
   }
 }
 

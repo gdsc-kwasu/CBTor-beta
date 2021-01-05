@@ -1,0 +1,71 @@
+/** @format */
+
+// Fonts
+@each $key, $val in $font-weights {
+  .font-weight-#{$key} {
+    font-weight: $val;
+  }
+}
+
+// Colors
+@each $key, $val in $colors {
+  .text-#{$key} {
+    color: $val;
+  }
+  .bg-#{$key} {
+    background: $val;
+  }
+  .btn-#{$key} {
+    background: $val;
+    box-shadow: 0 0 0 0 3px transparentize($color: $val, $amount: 0.8);
+  }
+}
+
+// Font sizes
+
+h1 {
+  font-size: 3rem;
+  line-height: 1.5em;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+  line-height: 1.5em;
+  margin-bottom: 0.75rem;
+}
+
+h3 {
+  font-size: 2rem;
+  line-height: 1.5em;
+  margin-bottom: .5rem;
+}
+
+h4 {
+  font-size: 1.75rem;
+  line-height: 1.5em;
+  margin-bottom: .25rem;
+}
+
+h5 {
+  font-size: 1.5rem;
+  line-height: 1.5em;
+  margin-bottom: .25rem;
+}
+
+h6 {
+  font-size: 1.25rem;
+  line-height: 1.5em;
+  margin-bottom: .25rem;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5em;
+}
+
+.small,
+small {
+  font-size: 0.875rem;
+  line-height: 1.5em;
+}

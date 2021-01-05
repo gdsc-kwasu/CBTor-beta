@@ -2,7 +2,7 @@
 
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { Home, Login } from "./pages";
+import { Home, Login, Components } from "./pages";
 import PAGES_URL from "../router/router";
 
 class Index extends Component {
@@ -12,6 +12,7 @@ class Index extends Component {
         <Switch>
           <Route exact path={PAGES_URL.HOME} component={Home} />
           <Route exact path={PAGES_URL.LOGIN} component={Login} />
+          <Route exact path={PAGES_URL.COMPONENTS} component={Components} />
         </Switch>
       </Router>
     );

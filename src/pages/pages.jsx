@@ -9,4 +9,9 @@ const Login = loadable(() => import("./auth/Login"), {
   fallback: <>Loading</>,
 });
 
-export { Home, Login };
+// App components are loaded from this file
+const Components = loadable(() => import("../components/Components"), {
+  fallback: <>Loading</>,
+});
+
+export { Home, Login, Components };

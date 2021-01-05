@@ -1,0 +1,196 @@
+/** @format */
+
+/**
+*  Creates the flex containers for mobile screens
+*/
+@for $var from 1 through 12 {
+  .col-#{$var} {
+    @include flexCalculator($var);
+  }
+}
+
+/**
+* Creates the padding and margin for mobile screens
+*/
+@each $key1, $item in $padding {
+  .p-#{$key1} {
+    padding: $item !important;
+  }
+  .py-#{$key1} {
+    padding-bottom: $item !important;
+    padding-top: $item !important;
+  }
+  .px-#{$key1} {
+    padding-left: $item !important;
+    padding-right: $item !important;
+  }
+  .pb-#{$key1} {
+    padding-bottom: $item !important;
+  }
+  .pt-#{$key1} {
+    padding-top: $item !important;
+  }
+  .pr-#{$key1} {
+    padding-right: $item !important;
+  }
+  .pl-#{$key1} {
+    padding-left: $item !important;
+  }
+  .m-#{$key1} {
+    margin: $item !important;
+  }
+  .mb-#{$key1} {
+    margin-bottom: $item !important;
+  }
+  .mt-#{$key1} {
+    margin-top: $item !important;
+  }
+  .mr-#{$key1} {
+    margin-right: $item !important;
+  }
+  .ml-#{$key1} {
+    margin-left: $item !important;
+  }
+}
+
+/**
+* Iterates throught the responsive variables to declare containers for each breakpoints
+*/
+@each $key, $val in $responsive {
+  @include media-breakpoint-up($key) {
+    // display properties for each breakpoint
+    .d-#{$key}-flex {
+      display: flex;
+    }
+    .d-#{$key}-block {
+      display: block;
+    }
+    .d-#{$key}-none {
+      display: none;
+    }
+    .flex-#{$key}-column {
+      flex-direction: column;
+    }
+
+    @for $var from 1 through 12 {
+      .col-#{$key}-#{$var} {
+        @include flexCalculator($var);
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+    }
+
+    // Creates the padding and margin for each breakpoints
+    @each $key1, $item in $padding {
+      .p-#{$key}-#{$key1} {
+        padding: $item !important;
+      }
+      .py-#{$key}-#{$key1} {
+        padding-bottom: $item !important;
+        padding-top: $item !important;
+      }
+      .px-#{$key1} {
+        padding-left: $item !important;
+        padding-right: $item !important;
+      }
+      .pb-#{$key}-#{$key1} {
+        padding-bottom: $item !important;
+      }
+      .pt-#{$key}-#{$key1} {
+        padding-top: $item !important;
+      }
+      .pr-#{$key}-#{$key1} {
+        padding-right: $item !important;
+      }
+      .pl-#{$key}-#{$key1} {
+        padding-left: $item !important;
+      }
+      .m-#{$key}-#{$key1} {
+        margin: $item !important;
+      }
+      .mb-#{$key}-#{$key1} {
+        margin-bottom: $item !important;
+      }
+      .mt-#{$key}-#{$key1} {
+        margin-top: $item !important;
+      }
+      .mr-#{$key}-#{$key1} {
+        margin-right: $item !important;
+      }
+      .ml-#{$key}-#{$key1} {
+        margin-left: $item !important;
+      }
+    }
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.no-gutters {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.vh-100 {
+  min-height: 100vh;
+}
+
+.vw-100 {
+  min-width: 100vw;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.d-block {
+  display: block;
+}
+
+.d-none {
+  display: none;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.d-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.d-justify-center {
+  display: flex;
+  justify-content: center;
+}
+
+.d-justify-end {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.d-align-center {
+  display: flex;
+  align-items: center;
+}
+
+.d-align-end {
+  display: flex;
+  align-items: flex-end;
+}
+
+.text-center {
+  text-align: center;
+}

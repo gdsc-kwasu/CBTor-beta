@@ -1,0 +1,29 @@
+/** @format */
+
+@mixin test($break-point, $res) {
+  @each $key, $value in $responsive {
+    @if $key == $res {
+      @media screen and ($break-point: $value) {
+        @content;
+      }
+    }
+  }
+}
+
+@mixin media-breakpoint-up($res) {
+  @include test(min-width, $res) {
+    @content;
+  }
+}
+
+@mixin media-breakpoint-down($res) {
+  @include test(max-width, $res) {
+    @content;
+  }
+}
+
+@mixin flexCalculator($var) {
+  width: 100%;
+  flex: 0 0 ((100/12) * $var * 1%);
+  max-width: 0 0 ((100/12) * $var * 1%);
+}
