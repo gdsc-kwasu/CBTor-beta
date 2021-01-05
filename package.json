@@ -35,6 +35,7 @@
     "feather-icons-react": "^0.4.1",
     "node-sass": "^4.14.1",
     "parcel-plugin-compress": "^2.0.2",
+    "re": "^0.1.4",
     "react": "^16.13.1",
     "react-alert": "^7.0.2",
     "react-dom": "^16.13.1",

@@ -51,6 +51,14 @@
   .ml-#{$key1} {
     margin-left: $item !important;
   }
+  .my-#{$key1} {
+    margin-bottom: $item !important;
+    margin-top: $item !important;
+  }
+  .mx-#{$key1} {
+    margin-left: $item !important;
+    margin-right: $item !important;
+  }
 }
 
 /**
@@ -75,8 +83,6 @@
     @for $var from 1 through 12 {
       .col-#{$key}-#{$var} {
         @include flexCalculator($var);
-        padding-left: 1rem;
-        padding-right: 1rem;
       }
     }
 
@@ -89,7 +95,7 @@
         padding-bottom: $item !important;
         padding-top: $item !important;
       }
-      .px-#{$key1} {
+      .px-#{$key}-#{$key1} {
         padding-left: $item !important;
         padding-right: $item !important;
       }
@@ -120,8 +126,23 @@
       .ml-#{$key}-#{$key1} {
         margin-left: $item !important;
       }
+      .my-#{$key}-#{$key1} {
+        margin-bottom: $item !important;
+        margin-top: $item !important;
+      }
+      .mx-#{$key}-#{$key1} {
+        margin-left: $item !important;
+        margin-right: $item !important;
+      }
     }
   }
+}
+
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100vh;
 }
 
 .row {
@@ -153,6 +174,10 @@
   display: flex;
 }
 
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
 .d-block {
   display: block;
 }
@@ -176,6 +201,11 @@
   justify-content: center;
 }
 
+.d-justify-between {
+  display: flex;
+  justify-content: space-between;
+}
+
 .d-justify-end {
   display: flex;
   justify-content: flex-end;
@@ -193,4 +223,25 @@
 
 .text-center {
   text-align: center;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.position-absolute {
+  position: absolute;
+}
+
+.border-radius {
+  border-radius: 4px;
+}
+
+.shadow {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 0px 2px rgba(0, 0, 0, 0.06),
+    0px 0px 1px rgba(0, 0, 0, 0.04);
+}
+
+.rounded-circle {
+  border-radius: 50%;
 }

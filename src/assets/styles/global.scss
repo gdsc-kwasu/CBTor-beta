@@ -4,4 +4,13 @@ html {
   font-family: $font-family;
   font-size: rfs();
   margin-bottom: 0;
+  color: map-get($colors, dark);
+}
+
+a {
+  text-decoration: none;
+}
+
+.text-underline {
+  text-decoration: underline;
 }

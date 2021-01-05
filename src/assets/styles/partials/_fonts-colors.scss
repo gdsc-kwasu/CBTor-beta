@@ -16,8 +16,22 @@
     background: $val;
   }
   .btn-#{$key} {
-    background: $val;
+    background: $val !important;
     box-shadow: 0 0 0 0 3px transparentize($color: $val, $amount: 0.8);
+    color: map-get($colors, "white") !important;
+    transition: background 0.5s;
+    &:hover {
+      background: darken($color: $val, $amount: 4) !important;
+    }
+  }
+  .border-#{$key} {
+    border: 0.5px solid $val;
+  }
+  .border-bottom-#{$key} {
+    border-bottom: 0.5px solid $val;
+  }
+  .border-top-#{$key} {
+    border-top: 0.5px solid $val;
   }
 }
 
@@ -26,42 +40,49 @@
 h1 {
   font-size: 3rem;
   line-height: 1.5em;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5em;
+  font-weight: map-get($font-weights, "bolder");
 }
 
 h2 {
   font-size: 2.5rem;
   line-height: 1.5em;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5em;
+  font-weight: map-get($font-weights, "bolder");
 }
 
 h3 {
   font-size: 2rem;
   line-height: 1.5em;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5em;
+  font-weight: map-get($font-weights, "bolder");
 }
 
 h4 {
   font-size: 1.75rem;
   line-height: 1.5em;
-  margin-bottom: .25rem;
+  margin-bottom: 0.5em;
+  font-weight: map-get($font-weights, "bolder");
 }
 
 h5 {
   font-size: 1.5rem;
   line-height: 1.5em;
-  margin-bottom: .25rem;
+  margin-bottom: 0.5em;
+  font-weight: map-get($font-weights, "bold");
 }
 
 h6 {
   font-size: 1.25rem;
   line-height: 1.5em;
-  margin-bottom: .25rem;
+  margin-bottom: 0.5em;
+  font-weight: map-get($font-weights, "bold");
 }
 
-p {
+p,
+a {
   font-size: 1rem;
-  line-height: 1.5em;
+  margin-bottom: 0.5em;
 }
 
 .small,

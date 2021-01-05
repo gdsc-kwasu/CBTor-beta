@@ -26,4 +26,6 @@
   width: 100%;
   flex: 0 0 ((100/12) * $var * 1%);
   max-width: 0 0 ((100/12) * $var * 1%);
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
