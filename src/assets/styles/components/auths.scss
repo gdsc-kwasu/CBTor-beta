@@ -1,0 +1,33 @@
+/** @format */
+@import "../partials/index.scss";
+
+.formRoot {
+  form {
+    color: map-get($colors, "dark-50");
+  }
+  & p {
+    width: 330px;
+    font-weight: 200;
+  }
+}
+.student {
+  width: 630px;
+  height: 550px;
+}
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+hr {
+  border-color: map-get($colors, "success");
+  width: 100%;
+}
+.or {
+  & .hr {
+    border-top: 1px solid map-get($colors, "dark-50");
+    width: 40%;
+  }
+}
+.forgot {
+  font-size: 12px;
+}
