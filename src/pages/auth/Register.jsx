@@ -42,7 +42,7 @@ const Register = ({ alert }) => {
 
   return (
     <section className="vh-100 container py-2">
-      <img src={cbtor} alt="Logo of CBTor" className="px-3" />
+      <img src={cbtor} alt="Logo of CBTor" className="cbtor-logo px-3" />
       <div className="root d-justify-between px-2">
         <img
           src={student}
@@ -56,7 +56,6 @@ const Register = ({ alert }) => {
               Giving You The Real-Life Computer Based Test Experience
             </p>
           </div>
-          <div className="mb-2 bottom-rule" />
           <form>
             <div className="input-group mt-3">
               <label htmlFor="fullname" className="text">

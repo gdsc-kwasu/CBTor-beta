@@ -21,8 +21,8 @@
   display: flex;
   flex-direction: column;
 }
-.bottom-rule {
-  border-top: 1px solid map-get($colors, "success");
+.form-head {
+  border-bottom: 1px solid map-get($colors, "success");
   width: 100%;
 }
 .or {
@@ -69,65 +69,86 @@
   .root {
     flex-wrap: wrap;
     flex-direction: column;
-
-    .form-head {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      text-align: center;
-    }
-
-    .bottom-rule {
-      width: 95%;
-    }
-
-    & .student {
-      height: 100%;
-      width: 100%;
-    }
-
-    & .formRoot {
-      width: 100%;
-      form {
-        padding-right: 7%;
-        margin: 0 auto;
-      }
-      .form-auth {
-        width: 100%;
-      }
-      .btn {
-        width: 100%;
-      }
-      & .withGoogle {
-        height: 18px;
-        width: 18px;
-        margin-left: -20%;
-      }
-      .txt {
-        font-size: 10px;
-      }
-    }
   }
-  .reset-password {
-    padding: 0 2%;
+  .cbtor-logo {
+    height: 20px;
   }
-  .reset-root {
-    padding: 0 4%;
+  .student {
     width: 100%;
-    margin: 19% 0;
+    height: 100%;
+  }
+  .form-head {
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    align-items: center;
+    text-align: center;
+
+    p {
+      width: 300px;
+      font-size: 10px;
+      padding: 0 3%;
+    }
+  }
+  .formRoot {
+    margin: 0;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    .form-auth,
+    .btn {
+      width: 100%;
+    }
+  }
+  form {
+    margin: 0;
+  }
+  .txt {
+    font-size: 11px;
+  }
+  .bottom-rule {
+    width: 100%;
+  }
+  // password reset success starts here.
+  .mail {
+    width: 100px;
+    height: 100px;
   }
   .title-txt {
-    margin: 0 -2%;
     width: 100%;
 
     .info {
-      padding: 4%;
+      width: 100%;
+      padding: 0 1%;
+      font-size: 11px !important;
+    }
+  }
+  .account {
+    font-size: 11px !important;
+  }
+  .reset-root {
+    margin: 0;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 12%;
+
+    form {
+      padding: 0 5%;
       width: 100%;
     }
   }
-  .txt {
-    font-size: 14px !important;
-    padding-right: 3%;
-  }
+  // ends here...
 }
+
+// .form-head {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   flex-direction: column;
+//   text-align: center;
+// }

@@ -36,15 +36,15 @@ const ForgotPwd = ({ alert }) => {
   return (
     <section className="vh-100 container py-4 reset-password">
       <div className="d-justify-between">
-        <img src={cbtor} alt="Logo of CBTor" className="px-2" />
-        <p>
+        <img src={cbtor} alt="Logo of CBTor" className="cbtor-logo px-2" />
+        <p className="account px-2">
           Don't have an account,{" "}
           <Link to="/register" className="text-success">
             Sign Up
           </Link>
         </p>
       </div>
-      <div className="root py-5 flex-column reset-root">
+      <div className="py-5 flex-column reset-root">
         <div className="text-center title-txt">
           <p className="">Did you forget your password?</p>
           <p className="mb-4 info">
@@ -76,7 +76,7 @@ const ForgotPwd = ({ alert }) => {
               </Link>
             </Button>
             <div className="or d-justify-between py-1 mt-1"></div>
-            <p className="txt py-1 text-center ml-5">
+            <p className="txt py-1 text-center">
               Back to{" "}
               <Link to="/login" className="txt text-success">
                 Sign In

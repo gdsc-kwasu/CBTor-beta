@@ -43,7 +43,7 @@ const Login = ({ alert }) => {
 
   return (
     <section className="vh-100 container py-4 authBase">
-      <img src={cbtor} alt="Logo of CBTor" className="px-2" />
+      <img src={cbtor} alt="Logo of CBTor" className="cbtor-logo px-2" />
       <div className="root d-justify-between px-2">
         <img
           src={student}

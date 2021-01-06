@@ -10,17 +10,17 @@ const Mail = () => {
   return (
     <section className="vh-100 container py-4">
       <div className="d-justify-between">
-        <img src={cbtor} alt="Logo of CBTor" className="px-2" />
-        <p>
+        <img src={cbtor} alt="Logo of CBTor" className="cbtor-logo px-2" />
+        <p className="account px-2">
           Don't have an account,{" "}
           <Link to="/register" className="text-success">
             Sign Up
           </Link>
         </p>
       </div>
-      <div className="root py-5 flex-column">
+      <div className="reset-root py-5 flex-column">
         <div className="d-justify-center">
-          <img src={mail} alt="a mail icon" />
+          <img src={mail} alt="a mail icon" className="mail" />
         </div>
         <div className="text-center title-txt py-5">
           <p className="reset-title">Reset Link Sent</p>
