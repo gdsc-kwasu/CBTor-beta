@@ -1,14 +1,17 @@
 /** @format */
 @import "../partials/index.scss";
-
 .formRoot {
+  margin-left: 3%;
   form {
     color: map-get($colors, "dark-50");
   }
   & p {
-    width: 330px;
+    width: 360px;
     font-weight: 200;
   }
+}
+.auth-field {
+  width: 100%;
 }
 .student {
   width: 630px;
@@ -28,6 +31,37 @@ hr {
     width: 40%;
   }
 }
-.forgot {
-  font-size: 12px;
+.txt {
+  font-size: 13px;
 }
+.forgot p {
+  font-weight: 600;
+}
+.withGoogle {
+  margin-left: -7%;
+}
+#pwd {
+  margin-bottom: 3%;
+}
+.check:checked {
+  background-color: map-get($colors, "success");
+}
+// password reset section starts here
+.title-txt {
+  font-weight: map-get($font-weights, "bold");
+  width: 500px;
+  margin: 0 auto;
+
+  & p {
+    font-size: 23px;
+    font-weight: map-get($font-weights, "medium");
+  }
+}
+.info {
+  width: 500px;
+  font-size: 14px !important;
+  font-weight: normal !important;
+  color: map-get($colors, "dark-50");
+  padding-left: 5%;
+}
+// password reset section ends here
