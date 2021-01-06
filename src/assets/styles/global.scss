@@ -5,6 +5,9 @@ html {
   font-size: rfs();
   margin-bottom: 0;
   color: map-get($colors, dark);
+  @include media-breakpoint-up(xl) {
+    font-size: #{$root-size}px;
+  }
 }
 
 a {
