@@ -21,8 +21,8 @@
   display: flex;
   flex-direction: column;
 }
-hr {
-  border-color: map-get($colors, "success");
+.bottom-rule {
+  border-top: 1px solid map-get($colors, "success");
   width: 100%;
 }
 .or {
@@ -65,3 +65,69 @@ hr {
   padding-left: 5%;
 }
 // password reset section ends here
+@include media-breakpoint-down(sm) {
+  .root {
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    .form-head {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .bottom-rule {
+      width: 95%;
+    }
+
+    & .student {
+      height: 100%;
+      width: 100%;
+    }
+
+    & .formRoot {
+      width: 100%;
+      form {
+        padding-right: 7%;
+        margin: 0 auto;
+      }
+      .form-auth {
+        width: 100%;
+      }
+      .btn {
+        width: 100%;
+      }
+      & .withGoogle {
+        height: 18px;
+        width: 18px;
+        margin-left: -20%;
+      }
+      .txt {
+        font-size: 10px;
+      }
+    }
+  }
+  .reset-password {
+    padding: 0 2%;
+  }
+  .reset-root {
+    padding: 0 4%;
+    width: 100%;
+    margin: 19% 0;
+  }
+  .title-txt {
+    margin: 0 -2%;
+    width: 100%;
+
+    .info {
+      padding: 4%;
+      width: 100%;
+    }
+  }
+  .txt {
+    font-size: 14px !important;
+    padding-right: 3%;
+  }
+}

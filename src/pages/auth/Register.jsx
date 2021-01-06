@@ -49,12 +49,14 @@ const Register = ({ alert }) => {
           className="py-5 student"
           alt="A female student working with her computer"
         />
-        <div className="formRoot px-5">
-          <h4>Create An Account</h4>
-          <p className="mb-2">
-            Giving You The Real-Life Computer Based Test Experience
-          </p>
-          <hr className="mb-2" />
+        <div className="formRoot px-5 form-register">
+          <div className="form-head">
+            <h4>Create An Account</h4>
+            <p className="mb-2">
+              Giving You The Real-Life Computer Based Test Experience
+            </p>
+          </div>
+          <div className="mb-2 bottom-rule" />
           <form>
             <div className="input-group mt-3">
               <label htmlFor="fullname" className="text">

@@ -34,7 +34,7 @@ const ForgotPwd = ({ alert }) => {
   };
 
   return (
-    <section className="vh-100 container py-4">
+    <section className="vh-100 container py-4 reset-password">
       <div className="d-justify-between">
         <img src={cbtor} alt="Logo of CBTor" className="px-2" />
         <p>
@@ -44,7 +44,7 @@ const ForgotPwd = ({ alert }) => {
           </Link>
         </p>
       </div>
-      <div className="root py-5 flex-column">
+      <div className="root py-5 flex-column reset-root">
         <div className="text-center title-txt">
           <p className="">Did you forget your password?</p>
           <p className="mb-4 info">

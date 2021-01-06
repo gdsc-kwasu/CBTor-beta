@@ -42,7 +42,7 @@ const Login = ({ alert }) => {
   };
 
   return (
-    <section className="vh-100 container py-4">
+    <section className="vh-100 container py-4 authBase">
       <img src={cbtor} alt="Logo of CBTor" className="px-2" />
       <div className="root d-justify-between px-2">
         <img
@@ -50,12 +50,14 @@ const Login = ({ alert }) => {
           className="py-5 student"
           alt="A male student working with his computer"
         />
-        <div className="formRoot">
-          <h4>Login To Your Account</h4>
-          <p className="mb-2">
-            Giving You The Real-Life Computer Based Test Experience
-          </p>
-          <hr className="mb-2" />
+        <div className="formRoot form-login">
+          <div className="form-head">
+            <h4>Login To Your Account</h4>
+            <p className="mb-2 intro-txt">
+              Giving You The Real-Life Computer Based Test Experience
+            </p>
+          </div>
+          <div className="mb-2 bottom-rule" />
           <form>
             <div className="input-group">
               <label htmlFor="email address" className="text">
