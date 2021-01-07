@@ -44,7 +44,7 @@ const ForgotPwd = ({ alert }) => {
           </Link>
         </p>
       </div>
-      <div className="py-5 flex-column reset-root">
+      <div className="py-5 flex-column reset-root d-justify-center">
         <div className="text-center title-txt">
           <p className="">Did you forget your password?</p>
           <p className="mb-4 info">

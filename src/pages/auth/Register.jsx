@@ -41,23 +41,24 @@ const Register = ({ alert }) => {
   };
 
   return (
-    <section className="vh-100 container py-2">
-      <img src={cbtor} alt="Logo of CBTor" className="cbtor-logo px-3" />
-      <div className="root d-justify-between px-2">
+    <section className="vh-100 container py-2 px-3">
+      <img src={cbtor} alt="Logo of CBTor" className="cbtor-logo px-2" />
+      <div className="root d-justify-center">
         <img
           src={student}
-          className="py-5 student"
+          className="py-5 mt-5 student"
           alt="A female student working with her computer"
         />
-        <div className="formRoot px-5 form-register">
+        <div className="formRoot form-register col-md-6">
           <div className="form-head">
             <h4>Create An Account</h4>
-            <p className="mb-2">
+            <p className="mb-2 into-txt">
               Giving You The Real-Life Computer Based Test Experience
             </p>
           </div>
+          <div className="mb-2 bottom-rule" />
           <form>
-            <div className="input-group mt-3">
+            <div className="input-group py-2">
               <label htmlFor="fullname" className="text">
                 Your fullname*
               </label>
@@ -65,7 +66,7 @@ const Register = ({ alert }) => {
                 type="text"
                 name="fullname"
                 id="fullname"
-                className="form-auth mb-3"
+                className="form-control form-auth mb-2"
                 placeholder="Enter your fullname (firstname, then lastname)"
                 value={registerAuth.email}
                 onChange={handleChange("fullname")}
@@ -79,7 +80,7 @@ const Register = ({ alert }) => {
                 type="email"
                 name="email"
                 id="email"
-                className="form-auth mb-3"
+                className="form-control form-auth mb-2"
                 placeholder="Enter your email address"
                 value={registerAuth.email}
                 onChange={handleChange("email")}
@@ -116,7 +117,7 @@ const Register = ({ alert }) => {
               />
               Login with Google
             </Button>
-            <p className="txt py-2">
+            <p className="txt py-2 txt-root">
               Already have an account?{" "}
               <Link to="/login" className="txt text-success">
                 Login{" "}

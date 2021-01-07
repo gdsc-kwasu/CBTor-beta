@@ -42,15 +42,15 @@ const Login = ({ alert }) => {
   };
 
   return (
-    <section className="vh-100 container py-4 authBase">
+    <section className="vh-100 container py-2 px-3">
       <img src={cbtor} alt="Logo of CBTor" className="cbtor-logo px-2" />
-      <div className="root d-justify-between px-2">
+      <div className="root d-justify-center">
         <img
           src={student}
-          className="py-5 student"
+          className="py-5 mt-5 student"
           alt="A male student working with his computer"
         />
-        <div className="formRoot form-login">
+        <div className="formRoot form-login col-md-6">
           <div className="form-head">
             <h4>Login To Your Account</h4>
             <p className="mb-2 intro-txt">
@@ -59,7 +59,7 @@ const Login = ({ alert }) => {
           </div>
           <div className="mb-2 bottom-rule" />
           <form>
-            <div className="input-group">
+            <div className="input-group py-2">
               <label htmlFor="email address" className="text">
                 Email address*
               </label>
@@ -67,7 +67,7 @@ const Login = ({ alert }) => {
                 type="email"
                 name="email"
                 id="email"
-                className="form-auth mb-2"
+                className="form-control form-auth mb-1"
                 placeholder="Enter your email address"
                 value={userLoginAuth.email}
                 onChange={handleChange("email")}
@@ -102,7 +102,7 @@ const Login = ({ alert }) => {
               />
               Login with Google
             </Button>
-            <p className="txt py-2">
+            <p className="txt py-2 txt-root">
               <Link to="/forgotpassword" className="txt text-success">
                 Forgot password?{" "}
               </Link>

@@ -1,5 +1,6 @@
 /** @format */
 @import "../partials/index.scss";
+
 .formRoot {
   margin-left: 3%;
   form {
@@ -9,13 +10,17 @@
     width: 360px;
     font-weight: 200;
   }
+  .form-auth,
+  .btn {
+    width: 100%;
+  }
 }
 .auth-field {
   width: 100%;
 }
 .student {
-  width: 630px;
-  height: 550px;
+  width: 600px;
+  height: 100%;
 }
 .input-group {
   display: flex;
@@ -23,7 +28,7 @@
 }
 .form-head {
   border-bottom: 1px solid map-get($colors, "success");
-  width: 100%;
+  width: 515px;
 }
 .or {
   & .hr {
@@ -65,7 +70,7 @@
   padding-left: 5%;
 }
 // password reset section ends here
-@include media-breakpoint-down(sm) {
+@include media-breakpoint-down(md) {
   .root {
     flex-wrap: wrap;
     flex-direction: column;
@@ -83,15 +88,15 @@
     flex-flow: column;
     align-items: center;
     text-align: center;
+    width: 100%;
 
     p {
       width: 300px;
-      font-size: 10px;
+      font-size: 11px;
       padding: 0 3%;
     }
   }
   .formRoot {
-    margin: 0;
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -102,15 +107,24 @@
     .btn {
       width: 100%;
     }
+    & form {
+      padding: 0 6%;
+      width: 100%;
+      margin-right: 5%;
+    }
   }
-  form {
-    margin: 0;
+  .txt-root {
+    width: 100% !important;
   }
   .txt {
     font-size: 11px;
   }
   .bottom-rule {
     width: 100%;
+  }
+  .withGoogle {
+    margin-left: -18%;
+    margin-top: -4px;
   }
   // password reset success starts here.
   .mail {
@@ -145,10 +159,17 @@
   // ends here...
 }
 
-// .form-head {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   flex-direction: column;
-//   text-align: center;
-// }
+// obeying the cascading law
+@include media-breakpoint-up(lg) {
+  .root {
+    margin: 0;
+    padding: 0 10%;
+  }
+  .formRoot {
+    width: 100%;
+
+    & .form-head {
+      width: 100%;
+    }
+  }
+}
