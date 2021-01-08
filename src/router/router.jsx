@@ -1,19 +1,27 @@
 /** @format */
 
 const HOME = "/";
+const COMPONENTS = "/components";
+
+// Authentication routes
 const LOGIN = "/login";
 const REGISTER = "/register";
 const FORGOT_PASSWORD = "/forgotpassword";
 const RESET_SUCCESS = "/reset-success";
-const COMPONENTS = "/components";
+
+// Dashboard routes
+const DASHBOARD = "/dashboard";
 
 const PAGES_URL = {
   HOME,
+  COMPONENTS,
+  // Authentication routes
   LOGIN,
   REGISTER,
   FORGOT_PASSWORD,
   RESET_SUCCESS,
-  COMPONENTS,
+  // Dashboard routes
+  DASHBOARD,
 };
 
 export default PAGES_URL;

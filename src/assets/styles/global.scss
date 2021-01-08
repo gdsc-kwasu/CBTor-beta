@@ -10,6 +10,12 @@ html {
   }
 }
 
+.app-container {
+  max-width: 1200px !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 a {
   text-decoration: none;
 }
@@ -17,10 +23,12 @@ a {
 .text-underline {
   text-decoration: underline;
 }
+
 ::-webkit-scrollbar {
-  width: 6px;
+  width: rem(6);
 }
+
 ::-webkit-scrollbar-thumb {
   background: map-get($colors, "primary");
-  border-radius: 4px;
+  border-radius: rem(4);
 }

@@ -1,0 +1,49 @@
+/** @format */
+
+.sidebar {
+  width: rfs(288, 200);
+  @include media-breakpoint-up(xl) {
+    width: 288px;
+  }
+  @include media-breakpoint-down(md) {
+    width: 260px;
+    left: -260px;
+    position: absolute;
+    height: 100vh;
+    z-index: 1;
+    transition: left 0.3s ease-in-out;
+  }
+  @include media-breakpoint-down(sm) {
+    width: 230px;
+    left: -230px;
+  }
+}
+
+.open {
+  left: 0;
+}
+
+.nav-link {
+  font-size: rem(18);
+  border-left: 5px solid transparent;
+  &__active {
+    border-color: map-get($colors, "white");
+    background: transparentize($color: map-get($colors, "white"), $amount: 0.8);
+  }
+  .icon-img {
+    width: rfs(25, 20);
+  }
+}
+
+.closer {
+  top: 15px;
+  right: 18px;
+  font-size: 16px;
+}
+
+.modal-bg {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+}

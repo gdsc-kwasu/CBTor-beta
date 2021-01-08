@@ -1,0 +1,41 @@
+/** @format */
+
+.navbar {
+  height: rfs(80, 55);
+  .fa-search {
+    font-size: rem(17);
+  }
+  @include media-breakpoint-up(xl) {
+    height: 80px;
+  }
+}
+
+.caret-down {
+  cursor: pointer;
+}
+
+.dropdown {
+  right: 0;
+  width: 200px;
+}
+
+.avatar {
+  width: rfs(50, 40);
+  height: rfs(50, 40);
+}
+
+.opener {
+  font-size: 25px;
+}
+
+.search-input {
+  height: rfs(50, 30);
+  border: 0.5px solid
+    transparentize($color: map-get($colors, "dark-50"), $amount: 0.8) !important;
+  &:focus {
+    border-color: map-get($colors, "success") !important;
+  }
+  @include media-breakpoint-up(xl) {
+    height: 50px;
+  }
+}
