@@ -14,3 +14,10 @@ a {
 .text-underline {
   text-decoration: underline;
 }
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: map-get($colors, "primary");
+  border-radius: 4px;
+}
