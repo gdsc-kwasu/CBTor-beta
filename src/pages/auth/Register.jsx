@@ -8,36 +8,35 @@ import Button from "../../components/Buttons";
 import { Link } from "react-router-dom";
 import * as EmailValidator from "email-validator";
 import cbtor from "../../assets/img/cbtor.png";
-import student from "../../assets/img/student.png";
+import student from "../../assets/img/male-stud.png";
 import google from "../../assets/img/icons_google.png";
 
-const Login = ({ alert }) => {
-  const [userLoginAuth, setUserLoginAuth] = React.useState({
+const Register = ({ alert }) => {
+  const [registerAuth, setRegisterAuth] = React.useState({
+    fullname: "",
     email: "",
     password: "",
   });
 
-  // handles the state of the student's data
-  // as they type in their details
   const handleChange = (input) => (e) => {
-    setUserLoginAuth({
-      ...userLoginAuth,
+    setRegisterAuth({
+      ...registerAuth,
       [input]: e.target.value,
     });
   };
 
   const validateStudentInput = () => {
-    if (!userLoginAuth.email) {
+    if (!registerAuth.fullname) {
+      alert.error("name cannot be blank");
+    }
+    if (!registerAuth.fullname) {
       alert.error("email cannot be blank");
-      return;
     }
-    if (!userLoginAuth.password) {
+    if (!registerAuth.fullname) {
       alert.error("What were you thinking? Please input your password.");
-      return;
     }
-    if (!EmailValidator.validate(userLoginAuth.email)) {
+    if (!EmailValidator.validate(registerAuth.fullname)) {
       alert.error("please provide a valid email address");
-      return;
     }
   };
 
@@ -48,18 +47,32 @@ const Login = ({ alert }) => {
         <img
           src={student}
           className="py-5 mt-5 student"
-          alt="A male student working with his computer"
+          alt="A female student working with her computer"
         />
-        <div className="formRoot form-login col-md-6">
+        <div className="formRoot form-register col-md-6">
           <div className="form-head">
-            <h4>Login To Your Account</h4>
-            <p className="mb-2 intro-txt">
+            <h4>Create An Account</h4>
+            <p className="mb-2 into-txt">
               Giving You The Real-Life Computer Based Test Experience
             </p>
           </div>
           <div className="mb-2 bottom-rule" />
           <form>
             <div className="input-group py-2">
+              <label htmlFor="fullname" className="text">
+                Your fullname*
+              </label>
+              <Input
+                type="text"
+                name="fullname"
+                id="fullname"
+                className="form-control form-auth mb-2"
+                placeholder="Enter your fullname (firstname, then lastname)"
+                value={registerAuth.email}
+                onChange={handleChange("fullname")}
+              />
+            </div>
+            <div className="input-group">
               <label htmlFor="email address" className="text">
                 Email address*
               </label>
@@ -67,9 +80,9 @@ const Login = ({ alert }) => {
                 type="email"
                 name="email"
                 id="email"
-                className="form-control form-auth mb-1"
+                className="form-control form-auth mb-2"
                 placeholder="Enter your email address"
-                value={userLoginAuth.email}
+                value={registerAuth.email}
                 onChange={handleChange("email")}
               />
             </div>
@@ -81,15 +94,17 @@ const Login = ({ alert }) => {
                 name="password"
                 id="pwd"
                 placeholder="Enter password"
-                value={userLoginAuth.password}
+                value={registerAuth.password}
                 onChange={handleChange("password")}
               />
             </div>
+            <input type="checkbox" className="check" /> I agree to terms &
+            conditions
             <Button
               className="btn-primary btn-submit mt-2 shadow"
               onClick={() => validateStudentInput()}
             >
-              Login
+              Sign Up
             </Button>
             <div className="or d-justify-between py-1 mt-1">
               <div className="hr mt-1" /> Or <div className="hr mt-1" />
@@ -103,13 +118,10 @@ const Login = ({ alert }) => {
               Login with Google
             </Button>
             <p className="txt py-2 txt-root">
-              <Link to="/forgotpassword" className="txt text-success">
-                Forgot password?{" "}
+              Already have an account?{" "}
+              <Link to="/login" className="txt text-success">
+                Login{" "}
               </Link>
-              or don't have an account?{" "}
-              <Link to="/register" className="txt text-success">
-                Sign Up
-              </Link>{" "}
               now
             </p>
           </form>
@@ -119,4 +131,4 @@ const Login = ({ alert }) => {
   );
 };
 
-export default withAlert()(Login);
+export default withAlert()(Register);
