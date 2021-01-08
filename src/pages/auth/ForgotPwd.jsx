@@ -2,14 +2,12 @@
 
 import React from "react";
 import "../../assets/styles/components/auths.scss";
-import { withAlert } from "react-alert";
 import Input from "../../components/Inputs";
-import * as EmailValidator from "email-validator";
 import Button from "../../components/Buttons";
 import { Link } from "react-router-dom";
 import cbtor from "../../assets/img/cbtor.png";
 
-const ForgotPwd = ({ alert }) => {
+const ForgotPwd = () => {
   const [passwordReset, setPasswordReset] = React.useState({
     password: "",
   });
@@ -21,16 +19,6 @@ const ForgotPwd = ({ alert }) => {
       ...passwordReset,
       [input]: e.target.value,
     });
-  };
-
-  const validateStudentInput = () => {
-    if (!passwordReset.email) {
-      alert.error("email cannot be blank");
-      return;
-    }
-    if (!EmailValidator.validate(passwordReset.email)) {
-      alert.error("please enter a valid email address");
-    }
   };
 
   return (
@@ -65,12 +53,10 @@ const ForgotPwd = ({ alert }) => {
                 placeholder="Enter password"
                 value={passwordReset.email}
                 onChange={handleChange("email")}
+                required
               />
             </div>
-            <Button
-              className="btn-primary btn-submit mt-2 shadow"
-              onClick={() => validateStudentInput()}
-            >
+            <Button className="btn-primary btn-submit mt-2 shadow">
               <Link to="/reset-success" className="text-white">
                 Send Reset Link
               </Link>
@@ -89,4 +75,4 @@ const ForgotPwd = ({ alert }) => {
   );
 };
 
-export default withAlert()(ForgotPwd);
+export default ForgotPwd;

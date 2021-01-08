@@ -26,20 +26,20 @@ const Login = ({ alert }) => {
     });
   };
 
-  const validateStudentInput = () => {
-    if (!userLoginAuth.email) {
-      alert.error("email cannot be blank");
-      return;
-    }
-    if (!userLoginAuth.password) {
-      alert.error("What were you thinking? Please input your password.");
-      return;
-    }
-    if (!EmailValidator.validate(userLoginAuth.email)) {
-      alert.error("please provide a valid email address");
-      return;
-    }
-  };
+  // const validateStudentInput = () => {
+  //   if (!userLoginAuth.email) {
+  //     alert.error("email cannot be blank");
+  //     return;
+  //   }
+  //   if (!userLoginAuth.password) {
+  //     alert.error("What were you thinking? Please input your password.");
+  //     return;
+  //   }
+  //   if (!EmailValidator.validate(userLoginAuth.email)) {
+  //     alert.error("please provide a valid email address");
+  //     return;
+  //   }
+  // };
 
   return (
     <section className="vh-100 container py-2 px-3">
@@ -71,6 +71,7 @@ const Login = ({ alert }) => {
                 placeholder="Enter your email address"
                 value={userLoginAuth.email}
                 onChange={handleChange("email")}
+                required
               />
             </div>
             <div className="input-group">
@@ -83,12 +84,10 @@ const Login = ({ alert }) => {
                 placeholder="Enter password"
                 value={userLoginAuth.password}
                 onChange={handleChange("password")}
+                required
               />
             </div>
-            <Button
-              className="btn-primary btn-submit mt-2 shadow"
-              onClick={() => validateStudentInput()}
-            >
+            <Button className="btn-primary btn-submit mt-2 shadow">
               Login
             </Button>
             <div className="or d-justify-between py-1 mt-1">

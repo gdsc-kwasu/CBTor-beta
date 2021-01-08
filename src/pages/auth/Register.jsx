@@ -25,20 +25,20 @@ const Register = ({ alert }) => {
     });
   };
 
-  const validateStudentInput = () => {
-    if (!registerAuth.fullname) {
-      alert.error("name cannot be blank");
-    }
-    if (!registerAuth.fullname) {
-      alert.error("email cannot be blank");
-    }
-    if (!registerAuth.fullname) {
-      alert.error("What were you thinking? Please input your password.");
-    }
-    if (!EmailValidator.validate(registerAuth.fullname)) {
-      alert.error("please provide a valid email address");
-    }
-  };
+  // const validateStudentInput = () => {
+  //   if (!registerAuth.fullname) {
+  //     alert.error("name cannot be blank");
+  //   }
+  //   if (!registerAuth.fullname) {
+  //     alert.error("email cannot be blank");
+  //   }
+  //   if (!registerAuth.fullname) {
+  //     alert.error("What were you thinking? Please input your password.");
+  //   }
+  //   if (!EmailValidator.validate(registerAuth.fullname)) {
+  //     alert.error("please provide a valid email address");
+  //   }
+  // };
 
   return (
     <section className="vh-100 container py-2 px-3">
@@ -68,8 +68,9 @@ const Register = ({ alert }) => {
                 id="fullname"
                 className="form-control form-auth mb-2"
                 placeholder="Enter your fullname (firstname, then lastname)"
-                value={registerAuth.email}
+                value={registerAuth.fullname}
                 onChange={handleChange("fullname")}
+                required
               />
             </div>
             <div className="input-group">
@@ -84,10 +85,11 @@ const Register = ({ alert }) => {
                 placeholder="Enter your email address"
                 value={registerAuth.email}
                 onChange={handleChange("email")}
+                required
               />
             </div>
             <div className="input-group">
-              <label htmlFor="passowrd" className="text">
+              <label htmlFor="password" className="text">
                 Your password*
               </label>
               <InputPassword
@@ -96,14 +98,12 @@ const Register = ({ alert }) => {
                 placeholder="Enter password"
                 value={registerAuth.password}
                 onChange={handleChange("password")}
+                required
               />
             </div>
-            <input type="checkbox" className="check" /> I agree to terms &
-            conditions
-            <Button
-              className="btn-primary btn-submit mt-2 shadow"
-              onClick={() => validateStudentInput()}
-            >
+            <input type="checkbox" className="check" required /> I agree to
+            terms & conditions
+            <Button className="btn-primary btn-submit mt-2 shadow">
               Sign Up
             </Button>
             <div className="or d-justify-between py-1 mt-1">
@@ -131,4 +131,4 @@ const Register = ({ alert }) => {
   );
 };
 
-export default withAlert()(Register);
+export default Register;
