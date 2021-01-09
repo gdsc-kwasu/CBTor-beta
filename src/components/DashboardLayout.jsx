@@ -9,20 +9,20 @@ const DashboardLayout = ({ children }) => {
   return (
     <div className="container-fluid">
       <div className="row no-gutters vh-100">
-        {isOpen && <div className="modal-bg d-md-none"></div>}
+        {isOpen && <div className="modal-bg d-lg-none"></div>}
 
         {/* Sidebar */}
-
         <Sidebar
           className={isOpen ? "open" : "sidebar"}
           closer={() => setIsOpen(false)}
         />
 
-        {/* dashboard maon content */}
-
-        <main className="col d-flex flex-column">
+        {/* dashboard main content */}
+        <main className="col d-flex flex-column bg-light vh-max-100 overflow-scroll">
           <Navbar toggler={() => setIsOpen(true)} />
-          <section className="w-100 h-100 app-container px-3 px-lg-0 py-3">{children}</section>
+          <section className="w-100 h-100 app-container px-2 px-lg-3 px-xxl-0 py-3 py-xl-4">
+            {children}
+          </section>
         </main>
       </div>
     </div>

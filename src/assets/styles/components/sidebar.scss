@@ -5,7 +5,7 @@
   @include media-breakpoint-up(xl) {
     width: 288px;
   }
-  @include media-breakpoint-down(md) {
+  @include media-breakpoint-down(lg) {
     width: 260px;
     left: -260px;
     position: absolute;
@@ -24,7 +24,7 @@
 }
 
 .nav-link {
-  font-size: rem(18);
+  font-size: rem(16);
   border-left: 5px solid transparent;
   &__active {
     border-color: map-get($colors, "white");
@@ -32,6 +32,9 @@
   }
   .icon-img {
     width: rfs(25, 20);
+    @include media-breakpoint-up(xl) {
+      width: 25px;
+    }
   }
 }
 
@@ -46,4 +49,5 @@
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
   position: absolute;
+  z-index: 1;
 }

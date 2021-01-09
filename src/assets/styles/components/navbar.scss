@@ -5,6 +5,8 @@
   .fa-search {
     font-size: rem(17);
   }
+  position: sticky;
+  top: 0;
   @include media-breakpoint-up(xl) {
     height: 80px;
   }
@@ -22,6 +24,10 @@
 .avatar {
   width: rfs(50, 40);
   height: rfs(50, 40);
+  @include media-breakpoint-up(xl) {
+    width: 50px;
+    height: 50px;
+  }
 }
 
 .opener {

@@ -11,19 +11,20 @@ $font-family: "Poppins", sans-serif;
 $root-size: 16;
 $responsive: (
   // "xs": 425px,
-    "sm": 576px,
+    "sm": 500px,
   "md": 768px,
-  "lg": 1025px,
-  "xl": 1200px
+  "lg": 992px,
+  "xl": 1200px,
+  "xxl": 1600px
 );
 
 $padding: (
   0: 0,
   1: 0.5rem,
   2: 1rem,
-  3: 1.75rem,
+  3: 1.25rem,
   4: 2.25rem,
-  5: 3rem,
+  5: 3.5rem,
 );
 
 $colors: (
@@ -32,4 +33,5 @@ $colors: (
   "dark": #303030,
   "dark-50": #828282,
   "white": #ffffff,
+  "light": #bdbdbd,
 );

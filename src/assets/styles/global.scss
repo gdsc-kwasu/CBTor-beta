@@ -11,9 +11,12 @@ html {
 }
 
 .app-container {
-  max-width: 1200px !important;
+  max-width: 1100px !important;
   margin-left: auto;
   margin-right: auto;
+  @include media-breakpoint-up(xl) {
+    max-width: 1150px !important;
+  }
 }
 
 a {
@@ -31,4 +34,49 @@ a {
 ::-webkit-scrollbar-thumb {
   background: map-get($colors, "primary");
   border-radius: rem(4);
+}
+
+.img-fluid {
+  width: 100%;
+}
+
+.rounded-top {
+  border-radius: 4px 4px 0 0;
+}
+
+.course-card {
+  font-size: rfs(16, 10) !important;
+  .small {
+    font-size: 0.85em;
+  }
+  .x-small {
+    font-size: 0.75em;
+  }
+  @include media-breakpoint-up(xl) {
+    font-size: 16px !important;
+  }
+}
+
+.vh-max-100 {
+  max-height: 100vh;
+}
+
+.overflow-scroll {
+  overflow-y: scroll;
+}
+
+.overflow-hidden {
+  overflow-y: hidden;
+}
+
+.alert-success {
+  border: 0.5px solid map-get($colors, "success");
+  background: transparentize($color: map-get($colors, "success"), $amount: 0.9);
+  color: map-get($colors, "success");
+}
+
+.alert-error {
+  border: 0.5px solid #d63031;
+  background: transparentize($color: #d63031, $amount: 0.9);
+  color: #d63031;
 }

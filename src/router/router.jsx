@@ -11,6 +11,9 @@ const RESET_SUCCESS = "/reset-success";
 
 // Dashboard routes
 const DASHBOARD = "/dashboard";
+const WALLET = "/wallet"
+const PERFORMANCE = "/performance"
+const FEEDBACK = "/feedback"
 
 const PAGES_URL = {
   HOME,
@@ -22,6 +25,9 @@ const PAGES_URL = {
   RESET_SUCCESS,
   // Dashboard routes
   DASHBOARD,
+  WALLET,
+  PERFORMANCE,
+  FEEDBACK
 };
 
 export default PAGES_URL;

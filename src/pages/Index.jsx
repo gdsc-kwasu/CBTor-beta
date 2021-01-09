@@ -12,6 +12,9 @@ import {
   ResetSuccess,
   // Dashboard Components
   Dashboard,
+  Wallet,
+  Performance,
+  Feedback,
 } from "./pages";
 import PAGES_URL from "../router/router";
 import DashboardLayout from "../components/DashboardLayout";
@@ -38,11 +41,12 @@ class Index extends Component {
           />
           {/**
            * Dashboard
-           * Once APIs are ready, the Route Components will be changed to authenticated Route components
-           * Route component will be named ProtectedRoute
            */}
           <DashboardLayout>
             <Route exact path={PAGES_URL.DASHBOARD} component={Dashboard} />
+            <Route exact path={PAGES_URL.WALLET} component={Wallet} />
+            <Route exact path={PAGES_URL.PERFORMANCE} component={Performance} />
+            <Route exact path={PAGES_URL.FEEDBACK} component={Feedback} />
           </DashboardLayout>
         </Switch>
       </Router>
