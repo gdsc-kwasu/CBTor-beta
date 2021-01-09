@@ -9,6 +9,14 @@
   }
 }
 
+.col {
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  max-width: 100%;
+}
+
 /**
 * Creates the padding and margin for mobile screens
 */
@@ -68,16 +76,16 @@
   @include media-breakpoint-up($key) {
     // display properties for each breakpoint
     .d-#{$key}-flex {
-      display: flex;
+      display: flex !important;
     }
     .d-#{$key}-block {
-      display: block;
+      display: block !important;
     }
     .d-#{$key}-none {
-      display: none;
+      display: none !important;
     }
     .flex-#{$key}-column {
-      flex-direction: column;
+      flex-direction: column !important;
     }
 
     @for $var from 1 through 12 {
@@ -139,10 +147,19 @@
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1300px !important;
   margin-left: auto;
   margin-right: auto;
   height: 100vh;
+}
+
+.container-fluid {
+  width: 100%;
+  height: 100vh;
+}
+
+.h-100 {
+  height: 100%;
 }
 
 .row {
@@ -244,4 +261,25 @@
 
 .rounded-circle {
   border-radius: 50%;
+}
+
+.rounded {
+  border-radius: 4px;
+}
+
+.rounded-lg {
+  border-radius: 8px;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.mr-auto {
+  margin-right: auto;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
 }

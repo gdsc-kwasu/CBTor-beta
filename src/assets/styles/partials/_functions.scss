@@ -6,8 +6,8 @@
 * is the value for mobile. Intermediate values are created according to screen
 * sizes
 */
-@function rfs($bigVal: 16, $smallVal: 12) {
-  
+
+@function rfs($bigVal: $root-size, $smallVal: 12) {
   @return (
     calc(
       #{$smallVal}px + (#{$bigVal - $smallVal}) *

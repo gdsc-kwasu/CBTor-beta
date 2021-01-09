@@ -8,16 +8,16 @@
 
 .form-control {
   outline: none;
-  padding: rfs(15);
+  padding: rem(15);
   border: 0.5px solid map-get($colors, dark-50);
-  padding-left: rfs(30);
-  padding-right: rfs(30);
+  padding-left: rem(25);
+  padding-right: rem(25);
   @extend .border-radius;
-  font-size: rfs(16);
+  font-size: rem(16);
   color: map-get($colors, dark);
   transition: border-color 0.5s;
   &::placeholder {
-    font-size: rfs(16);
+    font-size: rem(16);
     color: map-get($colors, dark-50);
   }
   &:focus {
@@ -26,23 +26,33 @@
     //   transparentize($color: map-get($colors, success), $amount: 0.7);
   }
   &[type="password"] {
-    padding-right: rfs(100) !important;
-    -webkit-text-stroke-width: 0.18em;
-    letter-spacing: 5px;
-    &::placeholder {
-      -webkit-text-stroke-width: 0;
-      letter-spacing: normal;
-    }
+    padding-right: rem(100) !important;
+    // -webkit-text-stroke-width: 0.18em;
+    // letter-spacing: 5px;
+    // &::placeholder {
+    //   -webkit-text-stroke-width: 0;
+    //   letter-spacing: normal;
+    // }
   }
 }
 
 .form-auth {
-  width: rfs(426, 265);
+  width: rfs(426, 300);
   height: rfs(64, 45);
 }
 
 .toggler {
   height: rfs(64, 45);
-  right: rfs(30, 15);
-  width: rfs(25, 17);
+  right: rem(30);
+  width: rem(25);
+}
+
+@include media-breakpoint-up(xl) {
+  .form-auth {
+    width: 426px;
+    height: 64px;
+  }
+  .toggler {
+    height: 64px;
+  }
 }
