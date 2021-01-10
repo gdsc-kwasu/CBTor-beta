@@ -19,6 +19,25 @@ const Login = loadable(() => import("./auth/Login"), {
   fallback: <Loader />,
 });
 
+// New Starts here
+const LoginNew = loadable(() => import("./auth/LoginNew"), {
+  fallback: <Loader />,
+});
+
+const SignUp = loadable(() => import("./auth/SignUp"), {
+  fallback: <Loader />,
+});
+
+const ForgotPassword = loadable(() => import("./auth/ForgotPassword"), {
+  fallback: <Loader />,
+});
+
+const ResetPassword = loadable(() => import("./auth/ResetPassword"), {
+  fallback: <Loader />,
+});
+
+// New ends here
+
 const Register = loadable(() => import("./auth/Register"), {
   fallback: <Loader />,
 });
@@ -65,7 +84,11 @@ export {
   Home,
   Components,
   // Authentication Components
+  LoginNew,
+  SignUp,
+  ForgotPassword,
   Login,
+  ResetPassword,
   Register,
   ForgotPwd,
   ResetSuccess,

@@ -7,7 +7,7 @@ import Button from "../../../components/Buttons";
 
 const RecommendedCard = () => {
   return (
-    <div className="col-12 col-md-6 d-center flex-column px-3 px-sm-5 px-md-4 px-xl-5 mb-xl-4">
+    <section className="col-12 col-md-6 d-center flex-column px-3 px-sm-5 px-md-4 px-xl-5 mb-xl-4">
       <h6 className="font-weight-medium text-center mb-1">Recommended</h6>
       <p className="small text-center mb-0 text-dark-50 px-1 px-md-0">
         Real-life examination standards. This will simulate the actual
@@ -32,7 +32,7 @@ const RecommendedCard = () => {
           Start Now
         </Button>
       </div>
-    </div>
+    </section>
   );
 };
 
@@ -41,7 +41,7 @@ const CustomCard = () => {
   const [, setTime] = useState((30 * value) / 35);
   // console.log(Math.ceil(time));
   return (
-    <div className="col-12 col-md-6 d-center flex-column px-3 px-sm-5 px-md-4 px-xl-5 mb-4 mb-sm-0 mb-xl-4 mt-5 mt-md-0">
+    <section className="col-12 col-md-6 d-center flex-column px-3 px-sm-5 px-md-4 px-xl-5 mb-4 mb-sm-0 mb-xl-4 mt-5 mt-md-0">
       <h6 className="font-weight-medium text-center mb-1">Custom</h6>
       <p className="small text-center mb-0 text-dark-50 px-1 px-md-0">
         Customize how your examination will be. The amount of questions chosen
@@ -63,13 +63,13 @@ const CustomCard = () => {
           Start Now
         </Button>
       </div>
-    </div>
+    </section>
   );
 };
 
 const ExamStart = () => {
   return (
-    <>
+    <main>
       <div
         className="p d-block text-success px-1 pointer"
         onClick={() => window.history.back()}
@@ -91,7 +91,7 @@ const ExamStart = () => {
           </div>
         </div>
       </div>
-    </>
+    </main>
   );
 };
 

@@ -3,9 +3,14 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import {
-  Home,
+  // Home,
   Components,
   // Auth Components, fetch components in the order they are exported
+  LoginNew,
+  SignUp,
+  ForgotPassword,
+  ResetPassword,
+  //
   Login,
   Register,
   ForgotPwd,
@@ -27,13 +32,16 @@ class Index extends Component {
     return (
       <Router>
         <Switch>
-          <Route exact path={PAGES_URL.HOME} component={Home} />
+          <Route exact path={PAGES_URL.HOME} component={LoginNew} />
           <Route exact path={PAGES_URL.COMPONENTS} component={Components} />
           {/**
            * Authentication routing is done here
            * Once APIs are ready, the Route Components will be changed to authenticated Route components
            * Route component will be named AuthActiveRoute
            */}
+          <Route exact path={PAGES_URL.SIGNUP} component={SignUp} />
+          <Route exact path={PAGES_URL.FORGOT} component={ForgotPassword} />
+          <Route exact path={PAGES_URL.RESET} component={ResetPassword} />
           <Route exact path={PAGES_URL.LOGIN} component={Login} />
           <Route exact path={PAGES_URL.REGISTER} component={Register} />
           <Route exact path={PAGES_URL.FORGOT_PASSWORD} component={ForgotPwd} />

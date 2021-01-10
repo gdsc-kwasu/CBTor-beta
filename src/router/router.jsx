@@ -5,7 +5,10 @@ const COMPONENTS = "/components";
 
 // Authentication routes
 const LOGIN = "/login";
+const SIGNUP = "/signup";
 const REGISTER = "/register";
+const FORGOT = "/forgot";
+const RESET = "/reset";
 const FORGOT_PASSWORD = "/forgotpassword";
 const RESET_SUCCESS = "/reset-success";
 
@@ -23,7 +26,10 @@ const PAGES_URL = {
   COMPONENTS,
   // Authentication routes
   LOGIN,
+  SIGNUP,
   REGISTER,
+  FORGOT,
+  RESET,
   FORGOT_PASSWORD,
   RESET_SUCCESS,
   // Dashboard routes

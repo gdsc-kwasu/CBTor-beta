@@ -28,12 +28,35 @@ a {
 }
 
 ::-webkit-scrollbar {
+  width: 0;
+}
+
+.dashboard::-webkit-scrollbar {
   width: rem(6);
 }
 
-::-webkit-scrollbar-thumb {
+.dashboard::-webkit-scrollbar-thumb {
   background: map-get($colors, "primary");
   border-radius: rem(4);
+}
+
+.app-logo {
+  top: 25px;
+  left: 0;
+  justify-content: center;
+  @include media-breakpoint-up(md) {
+    justify-content: flex-start;
+    padding-left: 50px;
+    // top: 10px;
+    &__img {
+      margin-top: 50px;
+      margin-left: 40px;
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    top: 10px;
+    padding-left: 80px;
+  }
 }
 
 .img-fluid {
@@ -78,13 +101,15 @@ a {
 
 .alert-success {
   border: 0.5px solid map-get($colors, "success");
-  background: transparentize($color: map-get($colors, "success"), $amount: 0.9);
+  // background: transparentize($color: map-get($colors, "success"), $amount: 0.9);
+  background: map-get($colors, "white");
   color: map-get($colors, "success");
 }
 
 .alert-error {
   border: 0.5px solid #d63031;
-  background: transparentize($color: #d63031, $amount: 0.9);
+  // background: transparentize($color: #d63031, $amount: 0.9);
+  background: map-get($colors, "white");
   color: #d63031;
 }
 
