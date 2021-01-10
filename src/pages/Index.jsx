@@ -12,6 +12,9 @@ import {
   ResetSuccess,
   // Dashboard Components
   Dashboard,
+  PaidTests,
+  MockTests,
+  ExamStart,
   Wallet,
   Performance,
   Feedback,
@@ -44,6 +47,9 @@ class Index extends Component {
            */}
           <DashboardLayout>
             <Route exact path={PAGES_URL.DASHBOARD} component={Dashboard} />
+            <Route exact path={PAGES_URL.PAID_TESTS} component={PaidTests} />
+            <Route exact path={PAGES_URL.MOCK_TESTS} component={MockTests} />
+            <Route exact path={PAGES_URL.START_EXAM} component={ExamStart} />
             <Route exact path={PAGES_URL.WALLET} component={Wallet} />
             <Route exact path={PAGES_URL.PERFORMANCE} component={Performance} />
             <Route exact path={PAGES_URL.FEEDBACK} component={Feedback} />

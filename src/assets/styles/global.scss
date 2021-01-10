@@ -46,6 +46,10 @@ a {
 
 .course-card {
   font-size: rfs(16, 10) !important;
+  .course-img {
+    height: rfs(128, 80);
+  }
+
   .small {
     font-size: 0.85em;
   }
@@ -54,6 +58,9 @@ a {
   }
   @include media-breakpoint-up(xl) {
     font-size: 16px !important;
+    .course-img {
+      height: 128px;
+    }
   }
 }
 
@@ -79,4 +86,8 @@ a {
   border: 0.5px solid #d63031;
   background: transparentize($color: #d63031, $amount: 0.9);
   color: #d63031;
+}
+
+.pointer {
+  cursor: pointer;
 }

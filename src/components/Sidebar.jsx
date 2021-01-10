@@ -6,7 +6,7 @@ import PAGES_URL from "../router/router";
 
 const LogoSection = () => {
   return (
-    <div className="py-4 d-center border-bottom-white">
+    <div className="py-4 d-center border-bottom-grey">
       <div className="d-align-center">
         <img
           src="https://res.cloudinary.com/codeleaf/image/upload/v1610148928/logo.svg"
@@ -28,9 +28,8 @@ const Sidebar = ({ className, closer }) => {
       ></i>
       <div className="py-3">
         <SidebarLink
-          exact
           to={PAGES_URL.DASHBOARD}
-          icon="https://res.cloudinary.com/codeleaf/image/upload/v1610143210/icons8-book.svg"
+          icon="https://res.cloudinary.com/codeleaf/image/upload/v1610229835/octicon_checklist-24.svg"
           onClick={closer}
         >
           Tests
@@ -38,7 +37,7 @@ const Sidebar = ({ className, closer }) => {
         <SidebarLink
           exact
           to={PAGES_URL.WALLET}
-          icon="https://res.cloudinary.com/codeleaf/image/upload/v1610143210/icons8-book.svg"
+          icon="https://res.cloudinary.com/codeleaf/image/upload/v1610236575/ic_outline-performance.svg"
           onClick={closer}
         >
           Wallet
@@ -46,7 +45,7 @@ const Sidebar = ({ className, closer }) => {
         <SidebarLink
           exact
           to={PAGES_URL.PERFORMANCE}
-          icon="https://res.cloudinary.com/codeleaf/image/upload/v1610143210/icons8-book.svg"
+          icon="https://res.cloudinary.com/codeleaf/image/upload/v1610236575/ic_outline-performance.svg"
           onClick={closer}
         >
           Performance
@@ -54,7 +53,7 @@ const Sidebar = ({ className, closer }) => {
         <SidebarLink
           exact
           to={PAGES_URL.FEEDBACK}
-          icon="https://res.cloudinary.com/codeleaf/image/upload/v1610143210/icons8-book.svg"
+          icon="https://res.cloudinary.com/codeleaf/image/upload/v1610236584/ic_outline-feedback.svg"
           onClick={closer}
         >
           Feedback

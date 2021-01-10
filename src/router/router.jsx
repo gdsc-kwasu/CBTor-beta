@@ -11,9 +11,12 @@ const RESET_SUCCESS = "/reset-success";
 
 // Dashboard routes
 const DASHBOARD = "/dashboard";
-const WALLET = "/wallet"
-const PERFORMANCE = "/performance"
-const FEEDBACK = "/feedback"
+const PAID_TESTS = "/dashboard/paid";
+const MOCK_TESTS = "/dashboard/mock";
+const START_EXAM = "/dashboard/start";
+const WALLET = "/wallet";
+const PERFORMANCE = "/performance";
+const FEEDBACK = "/feedback";
 
 const PAGES_URL = {
   HOME,
@@ -25,9 +28,12 @@ const PAGES_URL = {
   RESET_SUCCESS,
   // Dashboard routes
   DASHBOARD,
+  PAID_TESTS,
+  MOCK_TESTS,
+  START_EXAM,
   WALLET,
   PERFORMANCE,
-  FEEDBACK
+  FEEDBACK,
 };
 
 export default PAGES_URL;

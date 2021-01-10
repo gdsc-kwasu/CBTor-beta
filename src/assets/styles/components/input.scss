@@ -47,6 +47,13 @@
   width: rem(25);
 }
 
+// React sliders color override
+.input-range__track--active,
+.input-range__slider {
+  background: map-get($colors, "success") !important;
+  border-color: map-get($colors, "success") !important;
+}
+
 @include media-breakpoint-up(xl) {
   .form-auth {
     width: 426px;

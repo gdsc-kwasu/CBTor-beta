@@ -87,6 +87,29 @@
     .flex-#{$key}-column {
       flex-direction: column !important;
     }
+    .d-#{$key}-justify-center {
+      display: flex;
+      justify-content: center;
+    }
+    .d-#{$key}-justify-between {
+      display: flex;
+      justify-content: space-between !important;
+    }
+    .d-#{$key}-justify-end {
+      display: flex;
+      justify-content: flex-end;
+    }
+    .d-#{$key}-align-center {
+      display: flex;
+      align-items: center;
+    }
+    .d-#{$key}-align-end {
+      display: flex;
+      align-items: flex-end;
+    }
+    .text-#{$key}-center {
+      text-align: center;
+    }
 
     @for $var from 1 through 12 {
       .col-#{$key}-#{$var} {

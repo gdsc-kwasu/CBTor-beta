@@ -32,7 +32,19 @@ const ResetSuccess = loadable(() => import("./auth/ResetPwd"), {
 });
 
 // Dashboard Components
-const Dashboard = loadable(() => import("./dashboard/Dashboard"), {
+const Dashboard = loadable(() => import("./dashboard/courses/Dashboard"), {
+  fallback: <Loader />,
+});
+
+const PaidTests = loadable(() => import("./dashboard/courses/PaidTests"), {
+  fallback: <Loader />,
+});
+
+const MockTests = loadable(() => import("./dashboard/courses/MockTests"), {
+  fallback: <Loader />,
+});
+
+const ExamStart = loadable(() => import("./dashboard/courses/ExamStart"), {
   fallback: <Loader />,
 });
 
@@ -59,6 +71,9 @@ export {
   ResetSuccess,
   // Dashboard Components
   Dashboard,
+  PaidTests,
+  MockTests,
+  ExamStart,
   Wallet,
   Performance,
   Feedback,

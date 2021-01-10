@@ -39,7 +39,7 @@
     "react": "^16.13.1",
     "react-alert": "^7.0.2",
     "react-dom": "^16.13.1",
-    "react-r": "^2.0.0-rc02",
+    "react-input-range": "^1.3.0",
     "react-redux": "^7.2.1",
     "react-router-dom": "^5.2.0",
     "react-spinners": "^0.9.0",

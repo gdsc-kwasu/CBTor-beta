@@ -32,7 +32,7 @@ const Alert = ({ children }) => {
   const options = {
     position: positions.TOP_RIGHT,
     transition: transitions.FADE,
-    timeout: 3000,
+    timeout: 2000,
     // offset: "300px",
   };
   return (
