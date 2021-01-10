@@ -18,7 +18,7 @@ const DashboardLayout = ({ children }) => {
         />
 
         {/* dashboard main content */}
-        <main className="col d-flex flex-column bg-light vh-max-100 overflow-scroll">
+        <main className="col d-flex flex-column bg-light vh-max-100 overflow-scroll dashboard">
           <Navbar toggler={() => setIsOpen(true)} />
           <section className="w-100 h-100 app-container px-2 px-lg-3 px-xxl-0 py-3 py-xl-4">
             {children}

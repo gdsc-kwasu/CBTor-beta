@@ -3,7 +3,8 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { withAlert } from "react-alert";
-import CourseCard from "../../components/CourseCard";
+import CourseCard from "../../../components/CourseCard";
+import PAGES_URL from "../../../router/router";
 
 const Dashboard = ({ alert }) => {
   useEffect(() => {
@@ -17,7 +18,10 @@ const Dashboard = ({ alert }) => {
       </h6>
       <div className="d-justify-between mt-2 mt-lg-3 px-1">
         <p className="mb-0 font-weight-medium">Mock Tests</p>
-        <Link to="" className="d-block text-success text-underline">
+        <Link
+          to={PAGES_URL.MOCK_TESTS}
+          className="d-block text-success text-underline"
+        >
           See All
         </Link>
       </div>
@@ -28,13 +32,16 @@ const Dashboard = ({ alert }) => {
       </div>
       <div className="d-justify-between mt-2 mt-lg-3 px-1">
         <p className="mb-0 font-weight-medium">Paid Tests</p>
-        <Link to="" className="d-block text-primary text-underline">
+        <Link
+          to={PAGES_URL.PAID_TESTS}
+          className="d-block text-primary text-underline"
+        >
           See All
         </Link>
       </div>
       <div className="d-flex flex-wrap">
         {Array.from({ length: 8 }).map((i, idx) => (
-          <CourseCard key={idx} />
+          <CourseCard key={idx} type="text-primary" />
         ))}
       </div>
     </>

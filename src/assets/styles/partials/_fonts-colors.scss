@@ -39,6 +39,10 @@
   background: #f7f7f7;
 }
 
+.border-bottom-grey {
+  border-bottom: 0.5px solid transparentize($color: #f7f7f7, $amount: 0.5);
+}
+
 // Font sizes
 
 h1 {
@@ -63,7 +67,7 @@ h3 {
 }
 
 h4 {
-  font-size: 1.75rem;
+  font-size: 1.875rem;
   line-height: 1.5em;
   margin-bottom: 0.5em;
   font-weight: map-get($font-weights, "bolder");
@@ -84,6 +88,7 @@ h6 {
 }
 
 p,
+.p,
 a {
   font-size: 1rem;
   margin-bottom: 0.5em;
@@ -97,5 +102,10 @@ small {
 
 .x-small {
   font-size: 0.75rem;
+  line-height: 1.2em;
+}
+
+.xs-small {
+  font-size: 0.625rem;
   line-height: 1.2em;
 }

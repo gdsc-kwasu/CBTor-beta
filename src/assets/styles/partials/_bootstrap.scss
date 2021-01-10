@@ -87,6 +87,47 @@
     .flex-#{$key}-column {
       flex-direction: column !important;
     }
+    .d-#{$key}-center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .d-#{$key}-justify-center {
+      display: flex;
+      justify-content: center;
+    }
+    .d-#{$key}-justify-between {
+      display: flex;
+      justify-content: space-between !important;
+    }
+    .d-#{$key}-justify-end {
+      display: flex;
+      justify-content: flex-end;
+    }
+    .d-#{$key}-align-center {
+      display: flex;
+      align-items: center;
+    }
+    .d-#{$key}-align-end {
+      display: flex;
+      align-items: flex-end;
+    }
+    .d-#{$key}-align-start {
+      display: flex;
+      align-items: flex-start;
+    }
+    .text-#{$key}-center {
+      text-align: center;
+    }
+    .text-#{$key}-left {
+      text-align: left !important;
+    }
+    .vh-#{$key}-max {
+      max-height: 100vh;
+    }
+    .vh-#{$key}-min {
+      min-height: 100vh;
+    }
 
     @for $var from 1 through 12 {
       .col-#{$key}-#{$var} {
@@ -151,6 +192,12 @@
   margin-left: auto;
   margin-right: auto;
   height: 100vh;
+}
+
+.containerless {
+  max-width: 1300px !important;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .container-fluid {
@@ -238,8 +285,17 @@
   align-items: flex-end;
 }
 
+.d-align-start {
+  display: flex;
+  align-items: flex-start;
+}
+
 .text-center {
   text-align: center;
+}
+
+.text-left {
+  text-align: left;
 }
 
 .position-relative {

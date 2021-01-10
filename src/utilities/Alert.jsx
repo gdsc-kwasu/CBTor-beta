@@ -5,9 +5,9 @@ import { transitions, positions, Provider as AlertProvider } from "react-alert";
 
 const AlertTemplate = ({ message, options }) => {
   return (
-    <div className="mr-xxl-4 pt-3 pt-md-4">
+    <div className="mr-xxl-4 pt-2">
       <p
-        className={`rounded px-3 px-xl-4 py-1 small mt-5 mr-3 mr-md-4 mr-xxl-5 ${
+        className={`rounded px-3 px-xl-4 py-1 small mr-3 mr-md-4 mr-xxl-5 ${
           options.type === "success"
             ? "alert-success"
             : options.type === "error"
@@ -32,8 +32,8 @@ const Alert = ({ children }) => {
   const options = {
     position: positions.TOP_RIGHT,
     transition: transitions.FADE,
-    timeout: 3000,
-    // offset: "300px",
+    timeout: 2000,
+    offset: "0px",
   };
   return (
     <AlertProvider template={AlertTemplate} {...options}>

@@ -14,25 +14,39 @@ const Components = loadable(() => import("../components/Components"), {
   fallback: <Loader />,
 });
 
-// Authentication Components
-const Login = loadable(() => import("./auth/Login"), {
+// New Starts here
+const LoginNew = loadable(() => import("./auth/LoginNew"), {
   fallback: <Loader />,
 });
 
-const Register = loadable(() => import("./auth/Register"), {
+const SignUp = loadable(() => import("./auth/SignUp"), {
   fallback: <Loader />,
 });
 
-const ForgotPwd = loadable(() => import("./auth/ForgotPwd"), {
+const ForgotPassword = loadable(() => import("./auth/ForgotPassword"), {
   fallback: <Loader />,
 });
 
-const ResetSuccess = loadable(() => import("./auth/ResetPwd"), {
+const ResetPassword = loadable(() => import("./auth/ResetPassword"), {
   fallback: <Loader />,
 });
+
+// New ends here
 
 // Dashboard Components
-const Dashboard = loadable(() => import("./dashboard/Dashboard"), {
+const Dashboard = loadable(() => import("./dashboard/courses/Dashboard"), {
+  fallback: <Loader />,
+});
+
+const PaidTests = loadable(() => import("./dashboard/courses/PaidTests"), {
+  fallback: <Loader />,
+});
+
+const MockTests = loadable(() => import("./dashboard/courses/MockTests"), {
+  fallback: <Loader />,
+});
+
+const ExamStart = loadable(() => import("./dashboard/courses/ExamStart"), {
   fallback: <Loader />,
 });
 
@@ -53,12 +67,14 @@ export {
   Home,
   Components,
   // Authentication Components
-  Login,
-  Register,
-  ForgotPwd,
-  ResetSuccess,
+  LoginNew,
+  SignUp,
+  ForgotPassword,
   // Dashboard Components
   Dashboard,
+  PaidTests,
+  MockTests,
+  ExamStart,
   Wallet,
   Performance,
   Feedback,

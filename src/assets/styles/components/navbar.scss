@@ -18,7 +18,10 @@
 
 .dropdown {
   right: 0;
-  width: 200px;
+  width: rfs(220, 170);
+  @include media-breakpoint-up(xl) {
+    width: 220px;
+  }
 }
 
 .avatar {
@@ -31,11 +34,11 @@
 }
 
 .opener {
-  font-size: 25px;
+  font-size: 20px;
 }
 
 .search-input {
-  height: rfs(50, 30);
+  height: rfs(50, 35);
   border: 0.5px solid
     transparentize($color: map-get($colors, "dark-50"), $amount: 0.8) !important;
   &:focus {

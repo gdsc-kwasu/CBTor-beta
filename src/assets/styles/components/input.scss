@@ -41,10 +41,26 @@
   height: rfs(64, 45);
 }
 
+.w-auth {
+  width: rfs(426, 300);
+}
+
 .toggler {
   height: rfs(64, 45);
   right: rem(30);
   width: rem(25);
+}
+
+.divider {
+  width: 60px;
+}
+
+
+// React sliders color override
+.input-range__track--active,
+.input-range__slider {
+  background: map-get($colors, "success") !important;
+  border-color: map-get($colors, "success") !important;
 }
 
 @include media-breakpoint-up(xl) {
@@ -52,7 +68,13 @@
     width: 426px;
     height: 64px;
   }
+  .w-auth {
+    width: 426px;
+  }
   .toggler {
     height: 64px;
+  }
+  svg {
+    width: 170px;
   }
 }
