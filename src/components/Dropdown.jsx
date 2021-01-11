@@ -3,7 +3,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Dropdown = ({ show, setShow }) => {
+const Dropdown = ({ show, setShow, setModal }) => {
   return (
     <div className="position-relative mx-3 mx-md-2">
       <i
@@ -40,7 +40,13 @@ const Dropdown = ({ show, setShow }) => {
               Help
             </Link>
           </div>
-          <button className="btn-default py-1 mt-1 d-align-center btn-block x-small text-dark-50 font-weight-bold px-2 px-3 link-hover">
+          <button
+            className="btn-default py-1 mt-1 d-align-center btn-block x-small text-dark-50 font-weight-bold px-2 px-3 link-hover"
+            onClick={() => {
+              setModal();
+              setShow(!show);
+            }}
+          >
             <img
               src="https://res.cloudinary.com/codeleaf/image/upload/v1610238042/out.svg"
               alt=""

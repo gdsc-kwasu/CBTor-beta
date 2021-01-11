@@ -50,5 +50,8 @@
 }
 
 .link-hover:hover {
-  background-color: transparentize($color: map-get($colors, "light" ), $amount: 0.5);
+  background-color: transparentize(
+    $color: map-get($colors, "light"),
+    $amount: 0.5
+  ) !important;
 }

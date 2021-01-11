@@ -15,7 +15,7 @@ const SearchBar = () => {
   );
 };
 
-const Navbar = ({ toggler }) => {
+const Navbar = ({ toggler, setModal }) => {
   const [show, setShow] = useState(false);
   return (
     <nav className="bg-white navbar shadow px-3">
@@ -30,7 +30,7 @@ const Navbar = ({ toggler }) => {
             <p className="font-weight-medium mb-0 d-none d-md-block">
               Omodunni Alake
             </p>
-            <Dropdown show={show} setShow={setShow} />
+            <Dropdown show={show} setShow={setShow} setModal={setModal} />
             <img
               src="https://res.cloudinary.com/codeleaf/image/upload/v1606189091/instructor3.svg"
               className="avatar"

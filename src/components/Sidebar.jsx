@@ -37,7 +37,7 @@ const Sidebar = ({ className, closer }) => {
         <SidebarLink
           exact
           to={PAGES_URL.WALLET}
-          icon="https://res.cloudinary.com/codeleaf/image/upload/v1610236575/ic_outline-performance.svg"
+          icon="https://res.cloudinary.com/codeleaf/image/upload/v1610236571/bi_wallet.svg"
           onClick={closer}
         >
           Wallet
