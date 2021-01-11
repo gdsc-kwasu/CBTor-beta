@@ -1,6 +1,6 @@
 /** @format */
 
-const validator = (Validator, email, password, alert, name) => {
+const validator = (Validator, email, password, alert, name, coupon) => {
   let output;
   if (name && name.length === 1) {
     alert.error("Enter your fullname");

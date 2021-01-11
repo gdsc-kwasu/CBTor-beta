@@ -8,7 +8,7 @@ import PAGES_URL from "../router/router";
 
 const ExamSidebar = ({ history }) => {
   return (
-    <aside className="a-section bg-white p-4 px-md-5 px-lg-3 px-xl-4 px-xxl-5 vh-lg-min">
+    <aside className="a-section bg-white p-4 px-sm-5 px-lg-3 px-xl-4 vh-lg-min">
       <div className="px-md-2 px-lg-1">
         <div className="d-align-center">
           <img

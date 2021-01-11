@@ -1,122 +1,92 @@
 /** @format */
 
-import React from "react";
-import "../../assets/styles/components/auths.scss";
+import React, { useState } from "react";
+import { Link, withRouter } from "react-router-dom";
+import * as EmailValidator from "email-validator";
 import { withAlert } from "react-alert";
 import Input, { InputPassword } from "../../components/Inputs";
 import Button from "../../components/Buttons";
-import { Link } from "react-router-dom";
-import * as EmailValidator from "email-validator";
-import cbtor from "../../assets/img/cbtor.png";
-import student from "../../assets/img/student.png";
-import google from "../../assets/img/icons_google.png";
+import AuthLayout, { Divider } from "../../components/AuthLayout";
+import PAGES_URL from "../../router/router";
+import validator from "../../utilities/validator";
 
-const Login = ({ alert }) => {
-  const [userLoginAuth, setUserLoginAuth] = React.useState({
-    email: "",
-    password: "",
-  });
+const Login = ({ alert, history }) => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
-  // handles the state of the student's data
-  // as they type in their details
-  const handleChange = (input) => (e) => {
-    setUserLoginAuth({
-      ...userLoginAuth,
-      [input]: e.target.value,
-    });
-  };
-
-  const validateStudentInput = () => {
-    if (!userLoginAuth.email) {
-      alert.error("email cannot be blank");
-      return;
-    }
-    if (!userLoginAuth.password) {
-      alert.error("What were you thinking? Please input your password.");
-      return;
-    }
-    if (!EmailValidator.validate(userLoginAuth.email)) {
-      alert.error("please provide a valid email address");
-      return;
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const test = validator(EmailValidator, email, password, alert);
+    if (test) {
+      history.push(PAGES_URL.EXAM);
+      alert.success("Welcome Omodunni !!!");
     }
   };
 
   return (
-    <section className="vh-100 container py-2 px-3">
-      <img src={cbtor} alt="Logo of CBTor" className="cbtor-logo px-2" />
-      <div className="root d-justify-center">
-        <img
-          src={student}
-          className="py-5 mt-5 student"
-          alt="A male student working with his computer"
-        />
-        <div className="formRoot form-login col-md-6">
-          <div className="form-head">
-            <h4>Login To Your Account</h4>
-            <p className="mb-2 intro-txt">
-              Giving You The Real-Life Computer Based Test Experience
-            </p>
-          </div>
-          <div className="mb-2 bottom-rule" />
-          <form>
-            <div className="input-group py-2">
-              <label htmlFor="email address" className="text">
-                Email address*
-              </label>
-              <Input
-                type="email"
-                name="email"
-                id="email"
-                className="form-control form-auth mb-1"
-                placeholder="Enter your email address"
-                value={userLoginAuth.email}
-                onChange={handleChange("email")}
-              />
-            </div>
-            <div className="input-group">
-              <label htmlFor="passowrd" className="text">
-                Your password*
-              </label>
-              <InputPassword
-                name="password"
-                id="pwd"
-                placeholder="Enter password"
-                value={userLoginAuth.password}
-                onChange={handleChange("password")}
-              />
-            </div>
-            <Button
-              className="btn-primary btn-submit mt-2 shadow"
-              onClick={() => validateStudentInput()}
-            >
-              Login
-            </Button>
-            <div className="or d-justify-between py-1 mt-1">
-              <div className="hr mt-1" /> Or <div className="hr mt-1" />
-            </div>
-            <Button className="btn-submit shadow">
-              <img
-                src={google}
-                alt="google logo"
-                className="position-absolute withGoogle"
-              />
-              Login with Google
-            </Button>
-            <p className="txt py-2 txt-root">
-              <Link to="/forgotpassword" className="txt text-success">
-                Forgot password?{" "}
-              </Link>
-              or don't have an account?{" "}
-              <Link to="/register" className="txt text-success">
-                Sign Up
-              </Link>{" "}
-              now
-            </p>
-          </form>
+    <AuthLayout
+      banner="https://res.cloudinary.com/codeleaf/image/upload/v1610247155/cbtor/student.svg"
+      header="Login To Your Account"
+    >
+      <form onSubmit={handleSubmit}>
+        <div className="mb-3">
+          <label htmlFor="email" className="p text-dark-50 d-block">
+            Email address*
+          </label>
+          <Input
+            // type="email"
+            id="email"
+            placeholder="Enter your email address"
+            className="form-auth"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
         </div>
-      </div>
-    </section>
+        <div>
+          <label htmlFor="email" className="p text-dark-50 d-block">
+            Your password*
+          </label>
+          <InputPassword
+            placeholder="Enter password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+        </div>
+        <div className="mt-4">
+          <Button className="btn-primary btn-submit" type="submit">
+            Login
+          </Button>
+        </div>
+        <Divider />
+        <div className="mt-2">
+          <Button className="btn-submit d-center" type="button">
+            <img
+              src="https://res.cloudinary.com/codeleaf/image/upload/v1610248417/cbtor/googlecbt.svg"
+              alt="google"
+              className="mr-4"
+            />{" "}
+            Login with Google
+          </Button>
+        </div>
+        <p className="small mt-3 mb-0 text-dark-50 w-auth">
+          <Link
+            to={PAGES_URL.FORGOT}
+            className="small text-success font-weight-bold"
+          >
+            Forgot password?
+          </Link>{" "}
+          or don&apos;t have an account?{" "}
+          <Link
+            to={PAGES_URL.SIGNUP}
+            className="small text-success font-weight-bold"
+          >
+            Sign Up
+          </Link>{" "}
+          now
+        </p>
+      </form>
+    </AuthLayout>
   );
 };
 
-export default withAlert()(Login);
+export default withAlert()(withRouter(Login));

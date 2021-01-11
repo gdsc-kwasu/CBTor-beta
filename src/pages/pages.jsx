@@ -10,17 +10,8 @@ import Loader from "../components/Loader";
  */
 const Home = loadable(() => import("./Home"), { fallback: <Loader /> });
 
-const Components = loadable(() => import("../components/Components"), {
-  fallback: <Loader />,
-});
-
 // Authentication Components
 const Login = loadable(() => import("./auth/Login"), {
-  fallback: <Loader />,
-});
-
-// New Starts here
-const LoginNew = loadable(() => import("./auth/LoginNew"), {
   fallback: <Loader />,
 });
 
@@ -37,20 +28,6 @@ const ResetLink = loadable(() => import("./auth/ResetLink"), {
 });
 
 const ResetPassword = loadable(() => import("./auth/ResetPassword"), {
-  fallback: <Loader />,
-});
-
-// New ends here
-
-const Register = loadable(() => import("./auth/Register"), {
-  fallback: <Loader />,
-});
-
-const ForgotPwd = loadable(() => import("./auth/ForgotPwd"), {
-  fallback: <Loader />,
-});
-
-const ResetSuccess = loadable(() => import("./auth/ResetPwd"), {
   fallback: <Loader />,
 });
 
@@ -83,6 +60,9 @@ const Feedback = loadable(() => import("./dashboard/Feedback"), {
   fallback: <Loader />,
 });
 
+const Profile = loadable(() => import("./dashboard/Profile"), {
+  fallback: <Loader />,
+});
 // Examination Components
 const Exam = loadable(() => import("./examination/Exam"), {
   fallback: <Loader />,
@@ -95,17 +75,12 @@ const ExamResult = loadable(() => import("./examination/ExamResult"), {
 // Note: export components in the order they are fetched
 export {
   Home,
-  Components,
   // Authentication Components
-  LoginNew,
+  Login,
   SignUp,
   ForgotPassword,
-  Login,
   ResetLink,
   ResetPassword,
-  Register,
-  ForgotPwd,
-  ResetSuccess,
   // Dashboard Components
   Dashboard,
   PaidTests,
@@ -114,6 +89,7 @@ export {
   Wallet,
   Performance,
   Feedback,
+  Profile,
   // Examination components
   Exam,
   ExamResult,

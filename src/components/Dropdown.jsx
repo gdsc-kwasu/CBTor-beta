@@ -2,6 +2,7 @@
 
 import React from "react";
 import { Link } from "react-router-dom";
+import PAGES_URL from "../router/router";
 
 const Dropdown = ({ show, setShow, setModal }) => {
   return (
@@ -18,8 +19,9 @@ const Dropdown = ({ show, setShow, setModal }) => {
           </div>
           <div className="border-bottom-light">
             <Link
-              to=""
+              to={PAGES_URL.PROFILE}
               className="mb-0 px-2 px-xl-3 x-small text-dark-50 font-weight-medium py-1 d-block link-hover"
+              onClick={() => setShow(!show)}
             >
               <img
                 src="https://res.cloudinary.com/codeleaf/image/upload/v1610238039/profile.svg"
@@ -31,6 +33,7 @@ const Dropdown = ({ show, setShow, setModal }) => {
             <Link
               to=""
               className="mb-0 px-2 px-xl-3 x-small text-dark-50 font-weight-medium py-1 d-block link-hover"
+              onClick={() => setShow(!show)}
             >
               <img
                 src="https://res.cloudinary.com/codeleaf/image/upload/v1610238047/help.svg"

@@ -6,7 +6,7 @@ import { CountContainer, ExamDescription } from "./ExamComponents";
 
 const ExamGround = () => {
   return (
-    <main className="col bg-light px-4 px-md-5 px-lg-4 px-xl-5">
+    <main className="col bg-light px-3 px-sm-4 px-md-5 px-lg-4 px-xl-5">
       <section className="w-100 h-10 app-container px-xl-5 py-4 d-flex flex-column pb-5">
         <CountContainer />
         <ExamDescription />

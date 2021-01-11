@@ -26,7 +26,7 @@
     //   transparentize($color: map-get($colors, success), $amount: 0.7);
   }
   &[type="password"] {
-    padding-right: rem(100) !important;
+    padding-right: rem(80) !important;
     // -webkit-text-stroke-width: 0.18em;
     // letter-spacing: 5px;
     // &::placeholder {
@@ -37,24 +37,33 @@
 }
 
 .form-auth {
-  width: rfs(426, 300);
+  width: rfs(426, 320);
   height: rfs(64, 45);
+  @media screen and (max-width: 767.68px) and (min-width: 520px) {
+    width: 400px;
+  }
 }
 
 .w-auth {
-  width: rfs(426, 300);
+  width: rfs(426, 320);
+  @media screen and (max-width: 767.68px) and (min-width: 520px) {
+    width: 400px;
+  }
 }
 
 .toggler {
   height: rfs(64, 45);
   right: rem(30);
   width: rem(25);
+  top: rfs(-12, -7);
+  @include media-breakpoint-up(xxl) {
+    top: -12px;
+  }
 }
 
 .divider {
   width: 60px;
 }
-
 
 // React sliders color override
 .input-range__track--active,
@@ -63,7 +72,7 @@
   border-color: map-get($colors, "success") !important;
 }
 
-@include media-breakpoint-up(xl) {
+@include media-breakpoint-up(xxl) {
   .form-auth {
     width: 426px;
     height: 64px;

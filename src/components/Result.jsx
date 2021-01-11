@@ -34,18 +34,19 @@ const Question = ({ options, val }) => {
 const Result = ({ setShow }) => {
   const options = ["A", "B", "C", "D"];
   return (
-    <main className="col bg-light px-4 px-md-5 px-lg-4 px-xxl-5 vh-lg-max overflow-scroll__lg dashboard">
+    <main className="col bg-light px-3 px-sm-5 px-lg-4 px-xxl-5 vh-lg-max overflow-scroll__lg dashboard">
       <i
         className="fas fa-bars bg-primary text-white p-1 rounded position-absolute closer text-primary d-lg-none"
         onClick={() => setShow(true)}
       ></i>
       <section className="w-100 app-container px-xl-5 py-3 d-flex flex-column pb-5">
-        <div className="w-100 mt-1 mb-1 mb-md-0">
-          <Link to={PAGES_URL.EXAM} className="d-block text-success px-1">
-            <i className="fas fa-long-arrow-alt-left mr-1"></i>
-            Back to All Exams
-          </Link>
-        </div>
+        <Link
+          to={PAGES_URL.EXAM}
+          className="text-success px-1 mt-1 mb-1 mb-md-0 col-6"
+        >
+          <i className="fas fa-long-arrow-alt-left mr-1"></i>
+          Back to All Exams
+        </Link>
         <h6 className="font-weight-bolder mb-1 text-center">
           Your Exam Result
         </h6>

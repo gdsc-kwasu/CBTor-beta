@@ -1,0 +1,58 @@
+/** @format */
+
+@import "../partials/index.scss";
+
+.cec {
+  height: 26px;
+  height: 26px;
+}
+
+.coupon-code::placeholder {
+  text-align: center;
+  word-spacing: 15px;
+  letter-spacing: 6px;
+}
+// profile section starts here
+.profile-divider {
+  width: 100%;
+}
+svg {
+  margin-top: -2%;
+}
+#profile-card {
+  height: 70%;
+}
+#account-details,
+#profile-card {
+  background: #fff;
+}
+
+@include media-breakpoint-down(sm) {
+  .profile-details {
+    flex-wrap: wrap;
+  }
+  #profile-card {
+    width: 100%;
+    margin-bottom: 8%;
+
+    img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  #account-details {
+    width: 100%;
+
+    & form {
+      padding: 0 1%;
+    }
+    & .d-flex {
+      padding: 0 6%;
+      justify-content: space-between;
+      input {
+        width: 96%;
+      }
+    }
+  }
+}

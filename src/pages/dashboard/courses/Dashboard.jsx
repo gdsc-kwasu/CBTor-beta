@@ -1,15 +1,11 @@
 /** @format */
 
-import React, { useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import { withAlert } from "react-alert";
 import CourseCard from "../../../components/CourseCard";
 import PAGES_URL from "../../../router/router";
 
-const Dashboard = ({ alert }) => {
-  useEffect(() => {
-    alert.success("Welccome Omodunni!!!");
-  });
+const Dashboard = () => {
 
   return (
     <>
@@ -48,4 +44,4 @@ const Dashboard = ({ alert }) => {
   );
 };
 
-export default withAlert()(Dashboard);
+export default Dashboard;
