@@ -1,14 +1,14 @@
 /** @format */
 
 .navbar {
-  height: rfs(80, 55);
+  height: rfs(70, 55);
   .fa-search {
     font-size: rem(17);
   }
   position: sticky;
   top: 0;
   @include media-breakpoint-up(xl) {
-    height: 80px;
+    height: 70px;
   }
 }
 
@@ -18,9 +18,9 @@
 
 .dropdown {
   right: 0;
-  width: rfs(220, 170);
+  width: rfs(240, 185);
   @include media-breakpoint-up(xl) {
-    width: 220px;
+    width: 240px;
   }
 }
 
@@ -38,13 +38,17 @@
 }
 
 .search-input {
-  height: rfs(50, 35);
+  height: rfs(45, 35);
   border: 0.5px solid
     transparentize($color: map-get($colors, "dark-50"), $amount: 0.8) !important;
   &:focus {
     border-color: map-get($colors, "success") !important;
   }
   @include media-breakpoint-up(xl) {
-    height: 50px;
+    height: 45px;
   }
+}
+
+.link-hover:hover {
+  background-color: transparentize($color: map-get($colors, "light" ), $amount: 0.5);
 }

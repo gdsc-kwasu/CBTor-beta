@@ -92,7 +92,14 @@ a {
 }
 
 .overflow-scroll {
-  overflow-y: scroll;
+  overflow-y: auto;
+  overflow-x: hidden;
+  &__lg {
+    @include media-breakpoint-up(lg) {
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+  }
 }
 
 .overflow-hidden {
@@ -107,10 +114,10 @@ a {
 }
 
 .alert-error {
-  border: 0.5px solid #d63031;
+  border: 0.5px solid map-get($colors, "danger");
   // background: transparentize($color: #d63031, $amount: 0.9);
   background: map-get($colors, "white");
-  color: #d63031;
+  color: map-get($colors, "danger");
 }
 
 .pointer {

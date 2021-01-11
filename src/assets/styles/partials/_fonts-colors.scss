@@ -15,6 +15,9 @@
   .bg-#{$key} {
     background: $val;
   }
+  .bg-#{$key}-light {
+    background: transparentize($color: $val, $amount: 0.8);
+  }
   .btn-#{$key} {
     background: $val !important;
     box-shadow: 0 0 0 0 3px transparentize($color: $val, $amount: 0.8);

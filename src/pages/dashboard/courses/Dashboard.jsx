@@ -14,10 +14,10 @@ const Dashboard = ({ alert }) => {
   return (
     <>
       <h6 className="font-weigt-bold mb-0 px-1">
-        All Tests <small className="text-dark-50">| 256 Available Tests</small>
+        All Exams <small className="text-dark-50">| 256 Available Exams</small>
       </h6>
       <div className="d-justify-between mt-2 mt-lg-3 px-1">
-        <p className="mb-0 font-weight-medium">Mock Tests</p>
+        <p className="mb-0 font-weight-medium">Mock Exams</p>
         <Link
           to={PAGES_URL.MOCK_TESTS}
           className="d-block text-success text-underline"
@@ -31,7 +31,7 @@ const Dashboard = ({ alert }) => {
         ))}
       </div>
       <div className="d-justify-between mt-2 mt-lg-3 px-1">
-        <p className="mb-0 font-weight-medium">Paid Tests</p>
+        <p className="mb-0 font-weight-medium">Paid Exams</p>
         <Link
           to={PAGES_URL.PAID_TESTS}
           className="d-block text-primary text-underline"

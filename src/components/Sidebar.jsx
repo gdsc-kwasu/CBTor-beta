@@ -20,7 +20,7 @@ const LogoSection = () => {
 
 const Sidebar = ({ className, closer }) => {
   return (
-    <section className={`sidebar px-0 bg-primary vh-max-100 ${className}`}>
+    <aside className={`sidebar px-0 bg-primary vh-max-100 ${className}`}>
       <LogoSection />
       <i
         className="fas fa-times position-absolute closer text-white d-lg-none"
@@ -28,11 +28,11 @@ const Sidebar = ({ className, closer }) => {
       ></i>
       <div className="py-3">
         <SidebarLink
-          to={PAGES_URL.DASHBOARD}
+          to={PAGES_URL.EXAM}
           icon="https://res.cloudinary.com/codeleaf/image/upload/v1610229835/octicon_checklist-24.svg"
           onClick={closer}
         >
-          Tests
+          Exams
         </SidebarLink>
         <SidebarLink
           exact
@@ -59,7 +59,7 @@ const Sidebar = ({ className, closer }) => {
           Feedback
         </SidebarLink>
       </div>
-    </section>
+    </aside>
   );
 };
 

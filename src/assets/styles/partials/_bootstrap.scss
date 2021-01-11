@@ -126,7 +126,17 @@
       max-height: 100vh;
     }
     .vh-#{$key}-min {
-      min-height: 100vh;
+      min-height: 100vh !important;
+    }
+    .col-#{$key}-option {
+      width: 100%;
+      flex: 0 0 ((100/12) * 2.4 * 1%);
+      max-width: ((100/12) * 2.4 * 1%);
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    .flex-#{$key}-row {
+      flex-direction: row !important;
     }
 
     @for $var from 1 through 12 {
@@ -226,6 +236,10 @@
   width: 100%;
 }
 
+.vh-max {
+  max-height: 100vh;
+}
+
 .vh-100 {
   min-height: 100vh;
 }
@@ -252,6 +266,10 @@
 
 .flex-column {
   flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
 }
 
 .d-center {

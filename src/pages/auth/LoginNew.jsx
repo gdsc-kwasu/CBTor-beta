@@ -1,7 +1,7 @@
 /** @format */
 
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import * as EmailValidator from "email-validator";
 import { withAlert } from "react-alert";
 import Input, { InputPassword } from "../../components/Inputs";
@@ -10,7 +10,7 @@ import AuthLayout, { Divider } from "../../components/AuthLayout";
 import PAGES_URL from "../../router/router";
 import validator from "../../utilities/validator";
 
-const LoginNew = ({ alert }) => {
+const LoginNew = ({ alert, history }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -18,8 +18,7 @@ const LoginNew = ({ alert }) => {
     e.preventDefault();
     const test = validator(EmailValidator, email, password, alert);
     if (test) {
-      // eslint-disable-next-line no-alert
-      window.alert("yes");
+      history.push(PAGES_URL.EXAM);
     }
   };
 
@@ -89,4 +88,4 @@ const LoginNew = ({ alert }) => {
   );
 };
 
-export default withAlert()(LoginNew);
+export default withAlert()(withRouter(LoginNew));

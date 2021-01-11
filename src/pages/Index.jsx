@@ -9,6 +9,7 @@ import {
   LoginNew,
   SignUp,
   ForgotPassword,
+  ResetLink,
   ResetPassword,
   //
   // Dashboard Components
@@ -20,6 +21,9 @@ import {
   Performance,
   Feedback,
   Profile,
+  // Examination Components
+  Exam,
+  ExamResult,
 } from "./pages";
 import PAGES_URL from "../router/router";
 import DashboardLayout from "../components/DashboardLayout";
@@ -40,11 +44,26 @@ class Index extends Component {
           <Route exact path={PAGES_URL.FORGOT} component={ForgotPassword} />
           <Route exact path={PAGES_URL.RESET} component={ResetPassword} />
           <Route exact path={PAGES_URL.LOGIN} component={LoginNew} />
+          <Route exact path={PAGES_URL.LINK_SENT} component={ResetLink} />
+          <Route
+            exact
+            path={PAGES_URL.RESET_PASSWORD}
+            component={ResetPassword}
+          />
+          {/**
+           * Examination Components
+           */}
+          <Route
+            exact
+            path={`${PAGES_URL.EXAM}/start/:examId`}
+            component={Exam}
+          />
+          <Route exact path={PAGES_URL.EXAM_RESULT} component={ExamResult} />
           {/**
            * Dashboard
            */}
           <DashboardLayout>
-            <Route exact path={PAGES_URL.DASHBOARD} component={Dashboard} />
+            <Route exact path={PAGES_URL.EXAM} component={Dashboard} />
             <Route exact path={PAGES_URL.PAID_TESTS} component={PaidTests} />
             <Route exact path={PAGES_URL.MOCK_TESTS} component={MockTests} />
             <Route exact path={PAGES_URL.START_EXAM} component={ExamStart} />

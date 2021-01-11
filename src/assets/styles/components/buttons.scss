@@ -33,8 +33,9 @@
 }
 
 .btn-default {
-  background: transparent;
+  background: transparent !important;
   border: 0;
   outline: none;
   cursor: pointer;
+  box-shadow: none !important;
 }
