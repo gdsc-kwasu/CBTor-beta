@@ -32,6 +32,10 @@ const ForgotPassword = loadable(() => import("./auth/ForgotPassword"), {
   fallback: <Loader />,
 });
 
+const ResetLink = loadable(() => import("./auth/ResetLink"), {
+  fallback: <Loader />,
+});
+
 const ResetPassword = loadable(() => import("./auth/ResetPassword"), {
   fallback: <Loader />,
 });
@@ -84,6 +88,10 @@ const Exam = loadable(() => import("./examination/Exam"), {
   fallback: <Loader />,
 });
 
+const ExamResult = loadable(() => import("./examination/ExamResult"), {
+  fallback: <Loader />,
+});
+
 // Note: export components in the order they are fetched
 export {
   Home,
@@ -93,6 +101,7 @@ export {
   SignUp,
   ForgotPassword,
   Login,
+  ResetLink,
   ResetPassword,
   Register,
   ForgotPwd,
@@ -107,4 +116,5 @@ export {
   Feedback,
   // Examination components
   Exam,
+  ExamResult,
 };

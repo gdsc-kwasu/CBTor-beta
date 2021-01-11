@@ -18,6 +18,10 @@
   border: 1px solid map-get($colors, "dark-50");
   width: rem(30);
   height: rem(30);
+  &__small {
+    width: rem(23);
+    height: rem(23);
+  }
 }
 
 .option {
@@ -34,8 +38,8 @@
     }
   }
   &-card {
-  height: 45px;
-  border-radius: 2px;
+    height: 45px;
+    border-radius: 2px;
   }
 }
 
@@ -56,4 +60,33 @@
   width: 14px;
   height: 14px;
   border-radius: 2px;
+}
+
+@include media-breakpoint-down(lg) {
+  .result--section {
+    position: absolute;
+    width: 450px;
+    left: -450px;
+    transition: left 0.3s ease-in-out;
+  }
+  .open {
+    position: absolute;
+    width: 450px;
+    left: 0;
+    transition: left 0.3s ease-in-out;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .result--section {
+    width: 280px;
+    left: -280px;
+  }
+  .open {
+    width: 280px;
+  }
+}
+
+.bg-aside {
+  background-color: rgba(0, 0, 0, 0.5);
 }

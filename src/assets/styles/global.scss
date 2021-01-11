@@ -94,6 +94,12 @@ a {
 .overflow-scroll {
   overflow-y: auto;
   overflow-x: hidden;
+  &__lg {
+    @include media-breakpoint-up(lg) {
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+  }
 }
 
 .overflow-hidden {

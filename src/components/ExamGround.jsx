@@ -10,7 +10,7 @@ const ExamGround = () => {
       <section className="w-100 h-10 app-container px-xl-5 py-4 d-flex flex-column pb-5">
         <CountContainer />
         <ExamDescription />
-        <div className="mt-2 mt-lg-4 bg-white rounded shadow px-3 py-4 p-sm-5">
+        <div className="mt-2 mt-lg-3 bg-white rounded shadow px-3 py-4 p-sm-5">
           <Questions />
           <div className="mt-2 d-justify-center">
             <div className="col-8 col-md-6 col-lg-5 d-justify-between">

@@ -28,11 +28,11 @@ const Sidebar = ({ className, closer }) => {
       ></i>
       <div className="py-3">
         <SidebarLink
-          to={PAGES_URL.DASHBOARD}
+          to={PAGES_URL.EXAM}
           icon="https://res.cloudinary.com/codeleaf/image/upload/v1610229835/octicon_checklist-24.svg"
           onClick={closer}
         >
-          Tests
+          Exams
         </SidebarLink>
         <SidebarLink
           exact

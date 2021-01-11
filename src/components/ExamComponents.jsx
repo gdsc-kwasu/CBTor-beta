@@ -17,7 +17,7 @@ const renderer = ({ hours, minutes, seconds, completed }) => {
 
 const CountContainer = () => {
   return (
-    <nav className="d-justify-between">
+    <nav className="d-justify-between mb-4">
       <button className="btn small px-2 font-weight-bold text-danger bg-white">
         <i className="fas fa-times mr-1"></i>Terminate Test
       </button>
@@ -29,15 +29,13 @@ const CountContainer = () => {
   );
 };
 
-const ExamDescription = () => {
+const ExamDescription = ({ align }) => {
   return (
-    <div className="mt-4">
-      <div>
-        <h6 className="font-weight-bold text-success mb-0">
-          Introduction to Education
-        </h6>
-        <p className="font-weight-medium">EDU 101</p>
-      </div>
+    <div>
+      <h6 className={`font-weight-bold text-success mb-0 ${align}`}>
+        Introduction to Education
+      </h6>
+      <p className={`font-weight-medium mb-2 ${align}`}>EDU 101</p>
     </div>
   );
 };

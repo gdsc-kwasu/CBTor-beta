@@ -1,10 +1,12 @@
 /** @format */
 
 import React from "react";
+import { withRouter } from "react-router-dom";
 import Button from "./Buttons";
 import { OptionCategory } from "./ExamComponents";
+import PAGES_URL from "../router/router";
 
-const ExamSidebar = () => {
+const ExamSidebar = ({ history }) => {
   return (
     <aside className="a-section bg-white p-4 px-md-5 px-lg-3 px-xl-4 px-xxl-5 vh-lg-min">
       <div className="px-md-2 px-lg-1">
@@ -41,7 +43,10 @@ const ExamSidebar = () => {
           ))}
         </div>
         <div className="pr-1">
-          <Button className="w-100 btn-primary p font-weight-bold mt-1 py-3">
+          <Button
+            className="w-100 btn-primary p font-weight-bold mt-1 py-3"
+            onClick={() => history.push(PAGES_URL.EXAM_RESULT)}
+          >
             Submit Test
           </Button>
         </div>
@@ -50,4 +55,4 @@ const ExamSidebar = () => {
   );
 };
 
-export default ExamSidebar;
+export default withRouter(ExamSidebar);
