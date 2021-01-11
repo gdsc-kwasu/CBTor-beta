@@ -12,10 +12,6 @@ import {
   ResetLink,
   ResetPassword,
   //
-  Login,
-  Register,
-  ForgotPwd,
-  ResetSuccess,
   // Dashboard Components
   Dashboard,
   PaidTests,
@@ -24,6 +20,7 @@ import {
   Wallet,
   Performance,
   Feedback,
+  Profile,
   // Examination Components
   Exam,
   ExamResult,
@@ -45,19 +42,13 @@ class Index extends Component {
            */}
           <Route exact path={PAGES_URL.SIGNUP} component={SignUp} />
           <Route exact path={PAGES_URL.FORGOT} component={ForgotPassword} />
+          <Route exact path={PAGES_URL.RESET} component={ResetPassword} />
+          <Route exact path={PAGES_URL.LOGIN} component={LoginNew} />
           <Route exact path={PAGES_URL.LINK_SENT} component={ResetLink} />
           <Route
             exact
             path={PAGES_URL.RESET_PASSWORD}
             component={ResetPassword}
-          />
-          <Route exact path={PAGES_URL.LOGIN} component={Login} />
-          <Route exact path={PAGES_URL.REGISTER} component={Register} />
-          <Route exact path={PAGES_URL.FORGOT_PASSWORD} component={ForgotPwd} />
-          <Route
-            exact
-            path={PAGES_URL.RESET_SUCCESS}
-            component={ResetSuccess}
           />
           {/**
            * Examination Components
@@ -79,6 +70,7 @@ class Index extends Component {
             <Route exact path={PAGES_URL.WALLET} component={Wallet} />
             <Route exact path={PAGES_URL.PERFORMANCE} component={Performance} />
             <Route exact path={PAGES_URL.FEEDBACK} component={Feedback} />
+            <Route exact path={PAGES_URL.PROFILE} component={Profile} />
           </DashboardLayout>
         </Switch>
       </Router>

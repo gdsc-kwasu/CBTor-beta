@@ -18,8 +18,8 @@ const Dropdown = ({ show, setShow }) => {
           </div>
           <div className="border-bottom-light">
             <Link
-              to=""
-              className="mb-0 px-2 px-xl-3 x-small text-dark-50 font-weight-medium py-1 d-block link-hover"
+              to="/profile"
+              className="mb-0 px-2 px-xl-3 x-small text-dark-50 font-weight-medium py-1 d-block"
             >
               <img
                 src="https://res.cloudinary.com/codeleaf/image/upload/v1610238039/profile.svg"

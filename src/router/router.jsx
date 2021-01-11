@@ -8,10 +8,10 @@ const LOGIN = "/login";
 const SIGNUP = "/signup";
 const REGISTER = "/register";
 const FORGOT = "/forgot";
+
+const RESET = "/reset";
 const LINK_SENT = "/reset/sent";
 const RESET_PASSWORD = "/reset";
-const FORGOT_PASSWORD = "/forgotpassword";
-const RESET_SUCCESS = "/reset-success";
 
 // Dashboard routes
 const PAID_TESTS = "/exam/paid";
@@ -20,6 +20,7 @@ const START_EXAM = "/exam/start";
 const WALLET = "/wallet";
 const PERFORMANCE = "/performance";
 const FEEDBACK = "/feedback";
+const PROFILE = "/profile";
 
 // Examination routes
 const EXAM = "/exam";
@@ -33,10 +34,9 @@ const PAGES_URL = {
   SIGNUP,
   REGISTER,
   FORGOT,
+  RESET,
   LINK_SENT,
   RESET_PASSWORD,
-  FORGOT_PASSWORD,
-  RESET_SUCCESS,
   // Dashboard routes
   PAID_TESTS,
   MOCK_TESTS,
@@ -44,6 +44,7 @@ const PAGES_URL = {
   WALLET,
   PERFORMANCE,
   FEEDBACK,
+  PROFILE,
   // Examination routes
   EXAM,
   EXAM_RESULT,

@@ -14,11 +14,6 @@ const Components = loadable(() => import("../components/Components"), {
   fallback: <Loader />,
 });
 
-// Authentication Components
-const Login = loadable(() => import("./auth/Login"), {
-  fallback: <Loader />,
-});
-
 // New Starts here
 const LoginNew = loadable(() => import("./auth/LoginNew"), {
   fallback: <Loader />,
@@ -41,18 +36,6 @@ const ResetPassword = loadable(() => import("./auth/ResetPassword"), {
 });
 
 // New ends here
-
-const Register = loadable(() => import("./auth/Register"), {
-  fallback: <Loader />,
-});
-
-const ForgotPwd = loadable(() => import("./auth/ForgotPwd"), {
-  fallback: <Loader />,
-});
-
-const ResetSuccess = loadable(() => import("./auth/ResetPwd"), {
-  fallback: <Loader />,
-});
 
 // Dashboard Components
 const Dashboard = loadable(() => import("./dashboard/courses/Dashboard"), {
@@ -83,6 +66,9 @@ const Feedback = loadable(() => import("./dashboard/Feedback"), {
   fallback: <Loader />,
 });
 
+const Profile = loadable(() => import("./dashboard/Profile"), {
+  fallback: <Loader />,
+});
 // Examination Components
 const Exam = loadable(() => import("./examination/Exam"), {
   fallback: <Loader />,
@@ -100,12 +86,7 @@ export {
   LoginNew,
   SignUp,
   ForgotPassword,
-  Login,
   ResetLink,
-  ResetPassword,
-  Register,
-  ForgotPwd,
-  ResetSuccess,
   // Dashboard Components
   Dashboard,
   PaidTests,
@@ -114,6 +95,7 @@ export {
   Wallet,
   Performance,
   Feedback,
+  Profile,
   // Examination components
   Exam,
   ExamResult,
