@@ -36,10 +36,11 @@ const Wallet = () => {
             <Input
               type="text"
               name="coupon-code"
-              placeholder="---- ---- ----"
+              placeholder="----  ----  ----"
               value={coupon}
-              className="form-auth"
+              className="form-auth coupon-code"
               onChange={(e) => setCoupon(e.target.value)}
+              required
             />
             <p className="small text-success py-1 pb-1">
               *CEC refers to “CBTor Exam Credit”

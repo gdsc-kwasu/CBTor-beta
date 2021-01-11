@@ -9,8 +9,6 @@ const SIGNUP = "/signup";
 const REGISTER = "/register";
 const FORGOT = "/forgot";
 const RESET = "/reset";
-const FORGOT_PASSWORD = "/forgotpassword";
-const RESET_SUCCESS = "/reset-success";
 
 // Dashboard routes
 const DASHBOARD = "/dashboard";
@@ -20,6 +18,7 @@ const START_EXAM = "/dashboard/start";
 const WALLET = "/wallet";
 const PERFORMANCE = "/performance";
 const FEEDBACK = "/feedback";
+const PROFILE = "/profile";
 
 const PAGES_URL = {
   HOME,
@@ -30,8 +29,6 @@ const PAGES_URL = {
   REGISTER,
   FORGOT,
   RESET,
-  FORGOT_PASSWORD,
-  RESET_SUCCESS,
   // Dashboard routes
   DASHBOARD,
   PAID_TESTS,
@@ -40,6 +37,7 @@ const PAGES_URL = {
   WALLET,
   PERFORMANCE,
   FEEDBACK,
+  PROFILE,
 };
 
 export default PAGES_URL;

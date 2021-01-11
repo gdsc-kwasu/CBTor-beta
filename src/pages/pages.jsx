@@ -62,6 +62,10 @@ const Feedback = loadable(() => import("./dashboard/Feedback"), {
   fallback: <Loader />,
 });
 
+const Profile = loadable(() => import("./dashboard/Profile"), {
+  fallback: <Loader />,
+});
+
 // Note: export components in the order they are fetched
 export {
   Home,
@@ -78,4 +82,5 @@ export {
   Wallet,
   Performance,
   Feedback,
+  Profile,
 };

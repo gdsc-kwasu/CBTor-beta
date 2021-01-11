@@ -19,6 +19,7 @@ import {
   Wallet,
   Performance,
   Feedback,
+  Profile,
 } from "./pages";
 import PAGES_URL from "../router/router";
 import DashboardLayout from "../components/DashboardLayout";
@@ -50,6 +51,7 @@ class Index extends Component {
             <Route exact path={PAGES_URL.WALLET} component={Wallet} />
             <Route exact path={PAGES_URL.PERFORMANCE} component={Performance} />
             <Route exact path={PAGES_URL.FEEDBACK} component={Feedback} />
+            <Route exact path={PAGES_URL.PROFILE} component={Profile} />
           </DashboardLayout>
         </Switch>
       </Router>
