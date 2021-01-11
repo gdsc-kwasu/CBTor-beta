@@ -79,6 +79,11 @@ const Feedback = loadable(() => import("./dashboard/Feedback"), {
   fallback: <Loader />,
 });
 
+// Examination Components
+const Exam = loadable(() => import("./examination/Exam"), {
+  fallback: <Loader />,
+});
+
 // Note: export components in the order they are fetched
 export {
   Home,
@@ -100,4 +105,6 @@ export {
   Wallet,
   Performance,
   Feedback,
+  // Examination components
+  Exam,
 };

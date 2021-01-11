@@ -19,7 +19,7 @@ const Dropdown = ({ show, setShow }) => {
           <div className="border-bottom-light">
             <Link
               to=""
-              className="mb-0 px-2 px-xl-3 x-small text-dark-50 font-weight-medium py-1 d-block"
+              className="mb-0 px-2 px-xl-3 x-small text-dark-50 font-weight-medium py-1 d-block link-hover"
             >
               <img
                 src="https://res.cloudinary.com/codeleaf/image/upload/v1610238039/profile.svg"
@@ -30,7 +30,7 @@ const Dropdown = ({ show, setShow }) => {
             </Link>
             <Link
               to=""
-              className="mb-0 px-2 px-xl-3 x-small text-dark-50 font-weight-medium py-1 d-block"
+              className="mb-0 px-2 px-xl-3 x-small text-dark-50 font-weight-medium py-1 d-block link-hover"
             >
               <img
                 src="https://res.cloudinary.com/codeleaf/image/upload/v1610238047/help.svg"
@@ -40,7 +40,7 @@ const Dropdown = ({ show, setShow }) => {
               Help
             </Link>
           </div>
-          <button className="btn-default py-1 d-align-center btn-block x-small text-dark-50 font-weight-bold px-2 px-3">
+          <button className="btn-default py-1 mt-1 d-align-center btn-block x-small text-dark-50 font-weight-bold px-2 px-3 link-hover">
             <img
               src="https://res.cloudinary.com/codeleaf/image/upload/v1610238042/out.svg"
               alt=""

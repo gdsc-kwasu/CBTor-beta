@@ -21,6 +21,9 @@ const WALLET = "/wallet";
 const PERFORMANCE = "/performance";
 const FEEDBACK = "/feedback";
 
+// Examination routes
+const EXAM = "/exam";
+
 const PAGES_URL = {
   HOME,
   COMPONENTS,
@@ -40,6 +43,8 @@ const PAGES_URL = {
   WALLET,
   PERFORMANCE,
   FEEDBACK,
+  // Examination routes
+  EXAM,
 };
 
 export default PAGES_URL;

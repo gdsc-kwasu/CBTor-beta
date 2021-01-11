@@ -20,7 +20,7 @@ const LogoSection = () => {
 
 const Sidebar = ({ className, closer }) => {
   return (
-    <section className={`sidebar px-0 bg-primary vh-max-100 ${className}`}>
+    <aside className={`sidebar px-0 bg-primary vh-max-100 ${className}`}>
       <LogoSection />
       <i
         className="fas fa-times position-absolute closer text-white d-lg-none"
@@ -59,7 +59,7 @@ const Sidebar = ({ className, closer }) => {
           Feedback
         </SidebarLink>
       </div>
-    </section>
+    </aside>
   );
 };
 

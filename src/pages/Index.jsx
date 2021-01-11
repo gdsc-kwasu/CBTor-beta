@@ -23,6 +23,8 @@ import {
   Wallet,
   Performance,
   Feedback,
+  // Examination Components
+  Exam,
 } from "./pages";
 import PAGES_URL from "../router/router";
 import DashboardLayout from "../components/DashboardLayout";
@@ -50,6 +52,10 @@ class Index extends Component {
             path={PAGES_URL.RESET_SUCCESS}
             component={ResetSuccess}
           />
+          {/**
+           * Examination Components
+           */}
+          <Route exact path={PAGES_URL.EXAM} component={Exam} />
           {/**
            * Dashboard
            */}
