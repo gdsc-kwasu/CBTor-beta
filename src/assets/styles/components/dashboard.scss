@@ -6,7 +6,7 @@
   background: linear-gradient(89.92deg, #68d4c5 0.06%, #c2c68b 99.93%);
   height: 128px;
   margin-top: -38px;
-  margin-left: -5%;
+  margin-left: -3%;
   z-index: -1;
 }
 
@@ -104,7 +104,10 @@ table {
     margin: 0;
     padding: 0;
   }
-
+  #performance-table {
+    margin-top: 10% !important;
+    font-size: 12px;
+  }
   .card {
     width: 100%;
     padding: 0 1%;
