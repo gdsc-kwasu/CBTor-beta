@@ -2,6 +2,14 @@
 
 @import "../partials/index.scss";
 
+.background {
+  background: linear-gradient(89.92deg, #68d4c5 0.06%, #c2c68b 99.93%);
+  height: 128px;
+  margin-top: -38px;
+  margin-left: -5%;
+  z-index: -1;
+}
+
 .cec {
   height: 26px;
   height: 26px;
@@ -21,10 +29,41 @@ svg {
 }
 #profile-card {
   height: 70%;
+  z-index: 1;
 }
 #account-details,
 #profile-card {
-  background: #fff;
+  margin-top: -6%;
+}
+// performance section starts here
+.icon {
+  // tried using "d-justify-end" the styles didn't work.
+  margin-left: 90%;
+}
+thead,
+td {
+  border-bottom: 1px solid #c7c5c5;
+}
+td {
+  height: 55px;
+}
+tr {
+  &:hover {
+    background: #b0ddd3;
+    cursor: pointer;
+  }
+}
+td,
+th {
+  padding: 1%;
+  text-align: left;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+.underline {
+  text-decoration: underline;
 }
 
 @include media-breakpoint-down(sm) {
@@ -33,7 +72,9 @@ svg {
   }
   #profile-card {
     width: 100%;
-    margin-bottom: 8%;
+    margin-bottom: 15%;
+    z-index: 0;
+    margin-top: -17%;
 
     img {
       display: flex;
@@ -53,6 +94,31 @@ svg {
       input {
         width: 96%;
       }
+    }
+  }
+  // performance
+  .icon {
+    margin-left: 76%;
+  }
+  #performance-cards {
+    margin: 0;
+    padding: 0;
+  }
+
+  .card {
+    width: 100%;
+    padding: 0 1%;
+    height: 103px;
+
+    p {
+      font-size: 8px;
+    }
+  }
+  table {
+    width: 100%;
+    & td {
+      font-size: 8px;
+      height: 20px;
     }
   }
 }
