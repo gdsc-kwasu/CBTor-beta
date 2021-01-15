@@ -7,7 +7,7 @@
   }
   position: sticky;
   top: 0;
-  @include media-breakpoint-up(xl) {
+  @include media-breakpoint-up(xxl) {
     height: 70px;
   }
 }
@@ -19,7 +19,7 @@
 .dropdown {
   right: 0;
   width: rfs(240, 185);
-  @include media-breakpoint-up(xl) {
+  @include media-breakpoint-up(xxl) {
     width: 240px;
   }
 }
@@ -27,7 +27,7 @@
 .avatar {
   width: rfs(50, 40);
   height: rfs(50, 40);
-  @include media-breakpoint-up(xl) {
+  @include media-breakpoint-up(xxl) {
     width: 50px;
     height: 50px;
   }
@@ -44,11 +44,14 @@
   &:focus {
     border-color: map-get($colors, "success") !important;
   }
-  @include media-breakpoint-up(xl) {
+  @include media-breakpoint-up(xxl) {
     height: 45px;
   }
 }
 
 .link-hover:hover {
-  background-color: transparentize($color: map-get($colors, "light" ), $amount: 0.5);
+  background-color: transparentize(
+    $color: map-get($colors, "light"),
+    $amount: 0.5
+  ) !important;
 }

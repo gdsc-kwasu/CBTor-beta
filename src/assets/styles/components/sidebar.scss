@@ -2,7 +2,7 @@
 
 .sidebar {
   width: rfs(288, 200);
-  @include media-breakpoint-up(xl) {
+  @include media-breakpoint-up(xxl) {
     width: 288px;
   }
   @include media-breakpoint-down(lg) {
@@ -32,7 +32,7 @@
   }
   .icon-img {
     width: rfs(25, 20);
-    @include media-breakpoint-up(xl) {
+    @include media-breakpoint-up(xxl) {
       width: 25px;
     }
   }

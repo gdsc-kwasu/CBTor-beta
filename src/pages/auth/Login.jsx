@@ -10,7 +10,7 @@ import AuthLayout, { Divider } from "../../components/AuthLayout";
 import PAGES_URL from "../../router/router";
 import validator from "../../utilities/validator";
 
-const LoginNew = ({ alert, history }) => {
+const Login = ({ alert, history }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -19,6 +19,7 @@ const LoginNew = ({ alert, history }) => {
     const test = validator(EmailValidator, email, password, alert);
     if (test) {
       history.push(PAGES_URL.EXAM);
+      alert.success("Welcome Omodunni !!!");
     }
   };
 
@@ -88,4 +89,4 @@ const LoginNew = ({ alert, history }) => {
   );
 };
 
-export default withAlert()(withRouter(LoginNew));
+export default withAlert()(withRouter(Login));

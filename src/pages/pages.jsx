@@ -10,12 +10,8 @@ import Loader from "../components/Loader";
  */
 const Home = loadable(() => import("./Home"), { fallback: <Loader /> });
 
-const Components = loadable(() => import("../components/Components"), {
-  fallback: <Loader />,
-});
-
-// New Starts here
-const LoginNew = loadable(() => import("./auth/LoginNew"), {
+// Authentication Components
+const Login = loadable(() => import("./auth/Login"), {
   fallback: <Loader />,
 });
 
@@ -34,8 +30,6 @@ const ResetLink = loadable(() => import("./auth/ResetLink"), {
 const ResetPassword = loadable(() => import("./auth/ResetPassword"), {
   fallback: <Loader />,
 });
-
-// New ends here
 
 // Dashboard Components
 const Dashboard = loadable(() => import("./dashboard/courses/Dashboard"), {
@@ -81,12 +75,12 @@ const ExamResult = loadable(() => import("./examination/ExamResult"), {
 // Note: export components in the order they are fetched
 export {
   Home,
-  Components,
   // Authentication Components
-  LoginNew,
+  Login,
   SignUp,
   ForgotPassword,
   ResetLink,
+  ResetPassword,
   // Dashboard Components
   Dashboard,
   PaidTests,

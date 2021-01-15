@@ -24,11 +24,14 @@
 
 .btn-submit {
   height: rfs(64, 45);
-  width: rfs(426, 300);
+  width: rfs(426, 320);
   font-size: rem(18);
-  @include media-breakpoint-up(xl) {
+  @include media-breakpoint-up(xxl) {
     height: 64px;
     width: 426px;
+  }
+  @media screen and (max-width: 767.68px) and (min-width: 520px) {
+    width: 400px;
   }
 }
 

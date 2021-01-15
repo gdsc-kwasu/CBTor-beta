@@ -2,7 +2,7 @@
 
 .a-section {
   width: rfs(432, 200);
-  @include media-breakpoint-up(xl) {
+  @include media-breakpoint-up(xxl) {
     width: 432px;
   }
   @include media-breakpoint-down(lg) {
@@ -50,7 +50,7 @@
 .exam-avatar {
   width: rfs(100, 60);
   height: rfs(100, 60);
-  @include media-breakpoint-up(xl) {
+  @include media-breakpoint-up(xxl) {
     width: 100px;
     height: 100px;
   }

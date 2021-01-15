@@ -19,7 +19,7 @@ const CountContainer = () => {
   return (
     <nav className="d-justify-between mb-4">
       <button className="btn small px-2 font-weight-bold text-danger bg-white">
-        <i className="fas fa-times mr-1"></i>Terminate Test
+        <i className="fas fa-times mr-1"></i>Terminate Exam
       </button>
       <div className="countdown bg-white py-1 px-2 rounded shadow text-center">
         <i className="fas fa-stopwatch text-danger mr-1"></i>

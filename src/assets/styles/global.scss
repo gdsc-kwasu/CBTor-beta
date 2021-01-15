@@ -5,7 +5,7 @@ html {
   font-size: rfs();
   margin-bottom: 0;
   color: map-get($colors, dark);
-  @include media-breakpoint-up(xl) {
+  @include media-breakpoint-up(xxl) {
     font-size: #{$root-size}px;
   }
 }
@@ -14,7 +14,7 @@ html {
   max-width: 1100px !important;
   margin-left: auto;
   margin-right: auto;
-  @include media-breakpoint-up(xl) {
+  @include media-breakpoint-up(xxl) {
     max-width: 1150px !important;
   }
 }
@@ -79,7 +79,7 @@ a {
   .x-small {
     font-size: 0.75em;
   }
-  @include media-breakpoint-up(xl) {
+  @include media-breakpoint-up(xxl) {
     font-size: 16px !important;
     .course-img {
       height: 128px;
@@ -122,6 +122,30 @@ a {
 
 .pointer {
   cursor: pointer;
+}
+
+.modal {
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 101;
+  animation: fade 0.5s forwards;
+  @keyframes fade {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  &-content {
+    width: rfs(350, 280);
+    height: rfs(170, 125);
+    @include media-breakpoint-up(xxl) {
+      width: 350px;
+      height: 170px;
+    }
+  }
 }
 
 textarea {
