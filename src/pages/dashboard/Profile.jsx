@@ -36,7 +36,7 @@ const Profile = () => {
     <section id="profile-root">
       <div className="background vw-100" />
       <div className="profile-details d-justify-between col-sm-12">
-        <div className="col-md-4 shadow py-3 mx-1 bg-white" id="profile-card">
+        <div className="col-md-4 shadow py-3 mx-1 bg-white profile-card">
           <div className="d-center">
             <img src={avatar} alt="user profile image" />
           </div>
@@ -56,7 +56,7 @@ const Profile = () => {
             );
           })}
         </div>
-        <div className="col-md-8 shadow bg-white" id="account-details">
+        <div className="col-md-8 shadow bg-white account-details">
           <p className="small divide pt-3 pb-1 px-2">Account settings</p>
           <hr className="mb-3 profile-divider" />
           <form onSubmit={handleUpdate}>
@@ -149,7 +149,7 @@ const Profile = () => {
             </div>
             <hr className="mb-3 profile-divider my-3" />
             <div className="mt-2 pb-2">
-              <Button className="btn-primary btn-submit mx-2" type="submit">
+              <Button className="btn-primary btn-md mx-2" type="submit">
                 Update
               </Button>
             </div>
