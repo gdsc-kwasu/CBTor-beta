@@ -4,12 +4,12 @@
 
 .background {
   background: linear-gradient(89.92deg, #68d4c5 0.06%, #c2c68b 99.93%);
-  height: 128px;
+  height: 160px;
   margin-top: -38px;
-  margin-left: -3%;
+  margin-left: -20px;
   z-index: -1;
+  width: 110%;
 }
-
 .cec {
   height: 26px;
   height: 26px;
@@ -22,11 +22,6 @@
 // profile section starts here
 .profile-details {
   margin-top: -5%;
-
-  & .background {
-    z-index: -1%;
-    height: 250px !important;
-  }
   .profile-card {
     height: 100%;
   }
@@ -65,12 +60,15 @@ tr {
     border-left: 2px solid #3cb89c;
     background: #caf2e8;
     cursor: pointer;
+    border-left-width: 4px;
   }
 }
 td,
 th {
   padding: 1%;
+  padding-left: 18px;
   text-align: left;
+  white-space: nowrap;
 }
 table {
   border-collapse: collapse;
