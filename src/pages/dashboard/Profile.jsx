@@ -34,9 +34,9 @@ const Profile = () => {
 
   return (
     <section id="profile-root">
-      {/* <div className="background" /> */}
+      <div className="background vw-100" />
       <div className="profile-details d-justify-between col-sm-12">
-        <div className="col-md-4 shadow py-3 mx-1" id="profile-card">
+        <div className="col-md-4 shadow py-3 mx-1 bg-white profile-card rounded">
           <div className="d-center">
             <img src={avatar} alt="user profile image" />
           </div>
@@ -56,7 +56,7 @@ const Profile = () => {
             );
           })}
         </div>
-        <div className="col-md-8 shadow" id="account-details">
+        <div className="col-md-8 shadow bg-white account-details rounded">
           <p className="small divide pt-3 pb-1 px-2">Account settings</p>
           <hr className="mb-3 profile-divider" />
           <form onSubmit={handleUpdate}>
@@ -70,7 +70,7 @@ const Profile = () => {
                   name="firstname"
                   placeholder="Omodunni"
                   value={accountDetails.firstName}
-                  className="form-control w-100"
+                  className="form-control w-100 col-sm-12"
                   onChange={handleChange("firstname")}
                   required
                 />
@@ -84,7 +84,7 @@ const Profile = () => {
                   name="lastname"
                   placeholder="Alake"
                   value={accountDetails.lastName}
-                  className="form-control w-100"
+                  className="form-control w-100 col-sm-12"
                   onChange={handleChange("lastname")}
                   required
                 />
@@ -101,7 +101,7 @@ const Profile = () => {
                   name="phone"
                   placeholder="+234 812 345 6789"
                   value={accountDetails.phoneNumber}
-                  className="form-control w-100"
+                  className="form-control w-100 col-sm-12"
                   onChange={handleChange("phone")}
                   required
                 />
@@ -115,7 +115,7 @@ const Profile = () => {
                   name="lastname"
                   placeholder="omodunni.alake@gmail.com"
                   value={accountDetails.emailAddr}
-                  className="form-control w-100"
+                  className="form-control w-100 col-sm-12"
                   onChange={handleChange("email")}
                   required
                 />
@@ -129,7 +129,7 @@ const Profile = () => {
                 </label>
                 <InputPassword
                   value={accountDetails.oldPassword}
-                  className="form-control w-100"
+                  className="form-control w-100 col-sm-12"
                   onChange={handleChange("oldpassword")}
                   required
                 />
@@ -141,7 +141,7 @@ const Profile = () => {
                 <InputPassword
                   placeholder="Baby123"
                   value={accountDetails.newPassword}
-                  className="form-control w-100"
+                  className="form-control w-100 col-sm-12"
                   onChange={handleChange("lastname")}
                   required
                 />
@@ -149,7 +149,7 @@ const Profile = () => {
             </div>
             <hr className="mb-3 profile-divider my-3" />
             <div className="mt-2 pb-2">
-              <Button className="btn-primary btn-submit mx-2" type="submit">
+              <Button className="btn-primary btn-md mx-2" type="submit">
                 Update
               </Button>
             </div>

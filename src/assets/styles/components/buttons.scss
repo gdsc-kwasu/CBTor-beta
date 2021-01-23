@@ -42,3 +42,12 @@
   cursor: pointer;
   box-shadow: none !important;
 }
+
+// medium size button...
+// all the previous buttons are large.
+// no one corresponds with the one on the feeback component
+.btn-md {
+  width: 240px;
+  height: 64px;
+  font-size: 18px;
+}

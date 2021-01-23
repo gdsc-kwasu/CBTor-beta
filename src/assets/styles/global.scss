@@ -151,3 +151,10 @@ a {
 textarea {
   font-family: $font-family;
 }
+
+nav {
+  z-index: 9999;
+}
+aside {
+  z-index: 9999;
+}
