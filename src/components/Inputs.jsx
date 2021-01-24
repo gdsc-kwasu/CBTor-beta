@@ -12,13 +12,13 @@ const Input = ({ className, ...props }) => {
   );
 };
 
-const InputPassword = ({ ...props }) => {
+const InputPassword = ({ className, ...props }) => {
   const [toggler, setToggler] = useState(false);
   return (
     <div className="form-group position-relative">
       <input
         type={toggler ? "text" : "password"}
-        className="form-control form-auth"
+        className={`form-control form-auth ${className}`}
         {...props}
       />
       <FeatherIcon

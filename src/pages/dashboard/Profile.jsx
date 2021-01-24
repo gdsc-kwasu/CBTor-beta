@@ -35,125 +35,129 @@ const Profile = () => {
   return (
     <section id="profile-root">
       <div className="background vw-100" />
-      <div className="profile-details d-justify-between col-sm-12">
-        <div className="col-md-4 shadow py-3 mx-1 bg-white profile-card rounded">
-          <div className="d-center">
-            <img src={avatar} alt="user profile image" />
+      <div className="profile d-flex flex-wrap pb-5">
+        <div className="col-12 col-md-4 col-xl-3 px-0 h-100 pr-xl-0">
+          <div className="bg-white rounded shadow py-3">
+            <div className="d-center">
+              <img
+                src={avatar}
+                className="profile-avatar rounded-circle"
+                alt="user profile"
+              />
+            </div>
+            <h6 className="text-center text-dark font-weight-bold mt-1 mb-0 px-3">
+              Omodunni Alake
+            </h6>
+            <p className="small text-center text-dark-50 pb-2 px-3">
+              omodunni.alake@gmail.com
+            </p>
+            <div className="border-bottom-light mb-4" />
+            {tests.map((test, index) => {
+              return (
+                <div key={index} className="d-justify-between px-3">
+                  <p className="small text-dark">{test.title}</p>
+                  <p className="text-success">{test.score}</p>
+                </div>
+              );
+            })}
           </div>
-          <p className="small text-center text-dark font-weight-bold">
-            Omodunni Alake
-          </p>
-          <p className="small text-center text-dark-50 pb-2">
-            omodunni.alake@gmail.com
-          </p>
-          <hr className="mb-3 profile-divider" />
-          {tests.map((test, index) => {
-            return (
-              <div key={index} className="d-justify-between px-2">
-                <p className="small text-dark">{test.title}</p>
-                <p className="text-success">{test.score}</p>
-              </div>
-            );
-          })}
         </div>
-        <div className="col-md-8 shadow bg-white account-details rounded">
-          <p className="small divide pt-3 pb-1 px-2">Account settings</p>
-          <hr className="mb-3 profile-divider" />
-          <form onSubmit={handleUpdate}>
-            <div className="d-flex pb-1">
-              <div className="col-sm-6">
-                <label htmlFor="First Name" className="text-dark-50 d-block">
-                  First Name
-                </label>
-                <Input
-                  type="text"
-                  name="firstname"
-                  placeholder="Omodunni"
-                  value={accountDetails.firstName}
-                  className="form-control w-100 col-sm-12"
-                  onChange={handleChange("firstname")}
-                  required
-                />
+        <div className="col-12 mt-3 mt-md-0 px-0 col-md-8 col-xl-9 pl-md-3 pl-xl-3">
+          <div className="shadow bg-white rounded">
+            <p className="pt-3 pb-2 px-4 font-weight-bold border-bottom-light">
+              Account settings
+            </p>
+            <form onSubmit={handleUpdate}>
+              <div className="d-flex pb-1 flex-wrap px-2 border-bottom-light py-2">
+                <div className="col-12 col-md-6 mb-3">
+                  <label htmlFor="First Name" className="text-dark-50 d-block">
+                    First Name
+                  </label>
+                  <Input
+                    name="firstname"
+                    placeholder="Omodunni"
+                    value={accountDetails.firstName}
+                    className="form-auth w-100"
+                    onChange={handleChange("firstname")}
+                  />
+                </div>
+                <div className="col-12 col-md-6 mb-3">
+                  <label htmlFor="First Name" className="text-dark-50 d-block">
+                    First Name
+                  </label>
+                  <Input
+                    name="lastname"
+                    placeholder="Alake"
+                    value={accountDetails.lastName}
+                    className="form-auth w-100"
+                    onChange={handleChange("lastname")}
+                  />
+                </div>
+                <div className="col-12 col-md-6 mb-3">
+                  <label htmlFor="phone" className="text-dark-50 d-block">
+                    Phone Number
+                  </label>
+                  <Input
+                    type="phone"
+                    name="phone"
+                    placeholder="+234 812 345 6789"
+                    value={accountDetails.phoneNumber}
+                    className="form-auth w-100"
+                    onChange={handleChange("phone")}
+                  />
+                </div>
+                <div className="col-12 col-md-6 mb-3">
+                  <label htmlFor="email" className="text-dark-50 d-block">
+                    Email address
+                  </label>
+                  <Input
+                    type="email"
+                    name="lastname"
+                    placeholder="omodunni.alake@gmail.com"
+                    value={accountDetails.emailAddr}
+                    className="form-auth w-100"
+                    onChange={handleChange("email")}
+                  />
+                </div>
+                <div className="col-12 col-md-6 mb-3">
+                  <label
+                    htmlFor="old password"
+                    className="text-dark-50 d-block"
+                  >
+                    Old password
+                  </label>
+                  <InputPassword
+                    value={accountDetails.oldPassword}
+                    className="form-auth w-100"
+                    onChange={handleChange("oldpassword")}
+                  />
+                </div>
+                <div className="col-12 col-md-6 mb-3">
+                  <label
+                    htmlFor="new password"
+                    className="text-dark-50 d-block"
+                  >
+                    New Password
+                  </label>
+                  <InputPassword
+                    placeholder="Baby123"
+                    value={accountDetails.newPassword}
+                    className="w-100"
+                    onChange={handleChange("lastname")}
+                  />
+                </div>
               </div>
-              <div className="col-sm-6">
-                <label htmlFor="First Name" className="text-dark-50 d-block">
-                  First Name
-                </label>
-                <Input
-                  type="text"
-                  name="lastname"
-                  placeholder="Alake"
-                  value={accountDetails.lastName}
-                  className="form-control w-100 col-sm-12"
-                  onChange={handleChange("lastname")}
-                  required
-                />
+
+              <div className="mt-2 pb-4 px-2">
+                <Button
+                  className="btn-primary btn-submit col-4 mx-2"
+                  type="submit"
+                >
+                  Update
+                </Button>
               </div>
-            </div>
-            {/* line 2 */}
-            <div className="d-flex py-2">
-              <div className="col-sm-6">
-                <label htmlFor="phone" className="text-dark-50 d-block">
-                  Phone Number
-                </label>
-                <Input
-                  type="text"
-                  name="phone"
-                  placeholder="+234 812 345 6789"
-                  value={accountDetails.phoneNumber}
-                  className="form-control w-100 col-sm-12"
-                  onChange={handleChange("phone")}
-                  required
-                />
-              </div>
-              <div className="col-sm-6">
-                <label htmlFor="email" className="text-dark-50 d-block">
-                  Email address
-                </label>
-                <Input
-                  type="email"
-                  name="lastname"
-                  placeholder="omodunni.alake@gmail.com"
-                  value={accountDetails.emailAddr}
-                  className="form-control w-100 col-sm-12"
-                  onChange={handleChange("email")}
-                  required
-                />
-              </div>
-            </div>
-            {/* line 3 */}
-            <div className="d-flex py-2">
-              <div className="col-sm-6">
-                <label htmlFor="old password" className="text-dark-50 d-block">
-                  Old password
-                </label>
-                <InputPassword
-                  value={accountDetails.oldPassword}
-                  className="form-control w-100 col-sm-12"
-                  onChange={handleChange("oldpassword")}
-                  required
-                />
-              </div>
-              <div className="col-sm-6">
-                <label htmlFor="new password" className="text-dark-50 d-block">
-                  New Password
-                </label>
-                <InputPassword
-                  placeholder="Baby123"
-                  value={accountDetails.newPassword}
-                  className="form-control w-100 col-sm-12"
-                  onChange={handleChange("lastname")}
-                  required
-                />
-              </div>
-            </div>
-            <hr className="mb-3 profile-divider my-3" />
-            <div className="mt-2 pb-2">
-              <Button className="btn-primary btn-md mx-2" type="submit">
-                Update
-              </Button>
-            </div>
-          </form>
+            </form>
+          </div>
         </div>
       </div>
     </section>

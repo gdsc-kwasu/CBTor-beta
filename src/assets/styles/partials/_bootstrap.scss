@@ -357,3 +357,39 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+.table-container {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: rem(16);
+}
+
+td,
+th {
+  text-align: left;
+  padding: .75rem 1rem;
+  border-bottom: 1px solid #dee2e6;
+}
+
+th {
+  padding: 1rem 1rem;
+}
+
+td {
+  color: map-get($colors, "dark-50");
+  font-weight: map-get($font-weights, "light");
+  font-size: rem(15);
+}
+
+tbody tr {
+  &:hover {
+    background: rgba($color: map-get($colors, "light"), $alpha: 0.1);
+  }
+  &:last-child td {
+    border-bottom: none !important;
+  }
+}

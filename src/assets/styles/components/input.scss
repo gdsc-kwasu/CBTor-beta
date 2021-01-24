@@ -9,7 +9,7 @@
 .form-control {
   outline: none;
   padding: rem(15);
-  border: 0.5px solid map-get($colors, dark-50);
+  border: 0.5px solid map-get($colors, "light");
   padding-left: rem(25);
   padding-right: rem(25);
   @extend .border-radius;
@@ -18,9 +18,10 @@
   transition: border-color 0.5s;
   &::placeholder {
     font-size: rem(16);
-    color: map-get($colors, dark-50);
+    color: map-get($colors, "light");
   }
-  &:focus {
+  &:focus,
+  &:active {
     border-color: map-get($colors, success);
     // box-shadow: 0 0 0 3px
     //   transparentize($color: map-get($colors, success), $amount: 0.7);
@@ -42,6 +43,9 @@
   @media screen and (max-width: 767.68px) and (min-width: 520px) {
     width: 400px;
   }
+  @include media-breakpoint-up(xxl) {
+    height: 64px;
+  }
 }
 
 .w-auth {
@@ -55,9 +59,9 @@
   height: rfs(64, 45);
   right: rem(30);
   width: rem(25);
-  top: rfs(-12, -7);
+  top: rfs(-20, -15);
   @include media-breakpoint-up(xxl) {
-    top: -12px;
+    top: -20px;
   }
 }
 

@@ -12,7 +12,7 @@ const Dropdown = ({ show, setShow, setModal }) => {
         onClick={() => setShow(!show)}
       ></i>
       {show && (
-        <div className="position-absolute dropdown shadow bg-white py-1 mt-1 rounded">
+        <div className="position-absolute dropdown shadow bg-white pt-1 mt-1 rounded">
           <div className="px-2 px-xl-3 border-bottom-light pb-1">
             <p className="mb-0 small font-weight-medium">Omodunni Alake</p>
             <p className="mb-0 x-small text-dark-50">omodunni.alake@gmai...</p>
@@ -44,7 +44,7 @@ const Dropdown = ({ show, setShow, setModal }) => {
             </Link>
           </div>
           <button
-            className="btn-default py-1 mt-1 d-align-center btn-block x-small text-dark-50 font-weight-bold px-2 px-3 link-hover"
+            className="btn-default py-1 d-align-center btn-block x-small text-dark-50 font-weight-bold px-2 px-3 link-hover"
             onClick={() => {
               setModal();
               setShow(!show);
