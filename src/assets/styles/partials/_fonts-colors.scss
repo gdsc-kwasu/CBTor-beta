@@ -3,14 +3,14 @@
 // Fonts
 @each $key, $val in $font-weights {
   .font-weight-#{$key} {
-    font-weight: $val;
+    font-weight: $val !important;
   }
 }
 
 // Colors
 @each $key, $val in $colors {
   .text-#{$key} {
-    color: $val;
+    color: $val !important;
   }
   .bg-#{$key} {
     background: $val;
@@ -21,7 +21,7 @@
   .btn-#{$key} {
     background: $val !important;
     box-shadow: 0 0 0 0 3px transparentize($color: $val, $amount: 0.8);
-    color: map-get($colors, "white") !important;
+    color: map-get($colors, "white");
     transition: background 0.5s;
     &:hover {
       background: darken($color: $val, $amount: 4) !important;

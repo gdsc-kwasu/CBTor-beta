@@ -3,7 +3,7 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import {
-  // Home,
+  Home,
   // Auth Components, fetch components in the order they are exported
   Login,
   SignUp,
@@ -32,7 +32,7 @@ class Index extends Component {
     return (
       <Router>
         <Switch>
-          <Route exact path={PAGES_URL.HOME} component={Login} />
+          <Route exact path={PAGES_URL.HOME} component={Home} />
           {/**
            * Authentication routing is done here
            * Once APIs are ready, the Route Components will be changed to authenticated Route components

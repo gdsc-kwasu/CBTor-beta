@@ -3,25 +3,14 @@
 import React from "react";
 import SidebarLink from "./SidebarLink";
 import PAGES_URL from "../router/router";
-
-const LogoSection = () => {
-  return (
-    <div className="py-4 d-center border-bottom-grey">
-      <div className="d-align-center">
-        <img
-          src="https://res.cloudinary.com/codeleaf/image/upload/v1610148928/logo.svg"
-          alt="cbtor-logo"
-        />
-        <h5 className="mb-0 ml-1 text-white">CBTor</h5>
-      </div>
-    </div>
-  );
-};
+import AppLogo from "./AppLogo";
 
 const Sidebar = ({ className, closer }) => {
   return (
     <aside className={`sidebar px-0 bg-primary vh-max-100 ${className}`}>
-      <LogoSection />
+      <div className="py-4 d-center border-bottom-grey">
+        <AppLogo />
+      </div>
       <i
         className="fas fa-times position-absolute closer text-white d-lg-none"
         onClick={closer}

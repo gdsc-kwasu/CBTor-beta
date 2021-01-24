@@ -104,6 +104,10 @@
       display: flex;
       justify-content: flex-end;
     }
+    .d-#{$key}-justify-start {
+      display: flex;
+      justify-content: flex-start !important;
+    }
     .d-#{$key}-align-center {
       display: flex;
       align-items: center;
@@ -137,6 +141,13 @@
     }
     .flex-#{$key}-row {
       flex-direction: row !important;
+    }
+    .order-#{$key}-1 {
+      order: 1 !important;
+    }
+
+    .order-#{$key}-2 {
+      order: 2 !important;
     }
 
     @for $var from 1 through 12 {
@@ -371,7 +382,7 @@
 td,
 th {
   text-align: left;
-  padding: .75rem 1rem;
+  padding: 0.75rem 1rem;
   border-bottom: 1px solid #dee2e6;
 }
 
@@ -392,4 +403,12 @@ tbody tr {
   &:last-child td {
     border-bottom: none !important;
   }
+}
+
+.order-1 {
+  order: 1;
+}
+
+.order-2 {
+  order: 2;
 }
