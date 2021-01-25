@@ -2,6 +2,7 @@
 
 import React from "react";
 import { Link } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
 import Input from "../Inputs";
 import Button from "../Buttons";
 
@@ -26,15 +27,33 @@ const Footer = () => {
         </div>
         <div className="col-6 col-md-3 d-flex flex-column">
           <h6>Navigation</h6>
-          <Link to="" className="text-white">
+          <ScrollLink
+            to="home"
+            spy={true}
+            smooth={true}
+            duration={500}
+            className="text-white pointer"
+          >
             Home
-          </Link>
-          <Link to="" className="text-white">
+          </ScrollLink>
+          <ScrollLink
+            to="features"
+            spy={true}
+            smooth={true}
+            duration={500}
+            className="text-white pointer"
+          >
             Features
-          </Link>
-          <Link to="" className="text-white">
-            Subscribe
-          </Link>
+          </ScrollLink>
+          <ScrollLink
+            to="sponsors"
+            spy={true}
+            smooth={true}
+            duration={500}
+            className="text-white pointer"
+          >
+            Sponsors
+          </ScrollLink>
         </div>
         <div className="col-12 col-md-6 col-xl-5 mt-3 mt-md-0">
           <h6>Subscribe Today</h6>

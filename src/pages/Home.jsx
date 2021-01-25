@@ -12,15 +12,12 @@ import Footer from "../components/home/Footer";
 class Home extends Component {
   render() {
     return (
-      <div className="">
+      <div className="home">
         <div
           className="top d-center pointer"
           onClick={() => scroll.scrollToTop({ duration: 500 })}
         >
-          <div className="scale"></div>
-          <div className="top-2 d-center text-white">
-            <i className="fas fa-long-arrow-alt-up"></i>
-          </div>
+          <i className="fas fa-angle-up text-white"></i>
         </div>
         <Element name="home">
           <Hero />
