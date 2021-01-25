@@ -1,10 +1,11 @@
 /** @format */
 
-import React from "react";
+import React, { useState } from "react";
 import avatar from "../../assets/img/dunni.png";
 import "../../assets/styles/components/dashboard.scss";
 import Input, { InputPassword } from "../../components/Inputs";
 import Button from "../../components/Buttons";
+import cam from "../../assets/img/camera.svg";
 
 const tests = [
   { title: "Attempeted Tests", score: 54 },
@@ -21,6 +22,7 @@ const Profile = () => {
     oldPassword: "",
     newPassword: "",
   });
+  const [image, setImage] = useState(null);
 
   const handleChange = (input) => (e) => {
     setAccountDetails({
@@ -32,6 +34,12 @@ const Profile = () => {
     e.preventDefault();
   };
 
+  const handleImageUpload = (e) => {
+    e.preventDefault;
+    const img = e.target.files[0];
+    setImage(URL.createObjectURL(img));
+  };
+
   return (
     <section id="profile-root">
       <div className="background vw-100" />
@@ -40,10 +48,20 @@ const Profile = () => {
           <div className="bg-white rounded shadow py-3">
             <div className="d-center">
               <img
-                src={avatar}
+                src={image || avatar}
                 className="profile-avatar rounded-circle"
-                alt="user profile"
+                alt=""
               />
+              <input
+                type="file"
+                id="image"
+                accept="image/*"
+                onChange={handleImageUpload}
+                className="d-none"
+              />
+              <label className="upload-btn d-center" htmlFor="image">
+                <img src={cam} alt="" />
+              </label>
             </div>
             <h6 className="text-center text-dark font-weight-bold mt-1 mb-0 px-3">
               Omodunni Alake

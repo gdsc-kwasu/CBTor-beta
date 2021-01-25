@@ -64,8 +64,19 @@
   }
 }
 
-.profile-divider {
-  width: 100%;
+.upload-btn {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background: map-get($colors, "primary");
+  border: 2px solid map-get($colors, "white");
+  outline: none;
+  position: absolute;
+  margin-top: 120px;
+  margin-left: 120px;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 // Performance
