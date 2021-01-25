@@ -67,6 +67,37 @@
 .profile-divider {
   width: 100%;
 }
+.profile-avatar {
+  position: relative;
+  // Why I placed this border is so people can know
+  // that an element is supposed to there for now since the image's state
+  // isn't preserved yet (i.e If i refresh the browser,
+  // the image disappears) 'cause we aren't
+  // sending the image to the server yet.
+  border: 3px solid map-get($colors, "primary");
+}
+.upload-btn {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background: map-get($colors, "primary");
+  border: 3px solid map-get($colors, "white");
+  outline: none;
+  position: absolute;
+  margin-top: 120px;
+  margin-left: 120px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  // .upload-btn {
+  //   top: 70;
+  //   left: 90;
+  // }
+}
 
 // Performance
 thead th {
