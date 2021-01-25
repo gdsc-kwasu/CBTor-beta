@@ -5,6 +5,7 @@ import avatar from "../../assets/img/dunni.png";
 import "../../assets/styles/components/dashboard.scss";
 import Input, { InputPassword } from "../../components/Inputs";
 import Button from "../../components/Buttons";
+import cam from "../../assets/img/camera.svg";
 
 const tests = [
   { title: "Attempeted Tests", score: 54 },
@@ -22,6 +23,9 @@ const Profile = () => {
     newPassword: "",
   });
 
+  const uploadedImage = React.useRef(null);
+  const imageUploader = React.useRef(null);
+
   const handleChange = (input) => (e) => {
     setAccountDetails({
       [input]: e.target.value,
@@ -32,6 +36,20 @@ const Profile = () => {
     e.preventDefault();
   };
 
+  const handleImageUpload = (e) => {
+    const [img] = e.target.files;
+    if (img) {
+      const reader = new FileReader();
+      const { current } = uploadedImage;
+      current.img = img;
+      reader.onload = (e) => {
+        current.src = e.target.result;
+      };
+      localStorage.setItem("profileImg", img);
+      reader.readAsDataURL(img);
+    }
+  };
+
   return (
     <section id="profile-root">
       <div className="background vw-100" />
@@ -40,10 +58,23 @@ const Profile = () => {
           <div className="bg-white rounded shadow py-3">
             <div className="d-center">
               <img
-                src={avatar}
+                ref={uploadedImage}
                 className="profile-avatar rounded-circle"
-                alt="user profile"
+                // alt="user profile"
               />
+              <input
+                type="file"
+                accept="image/*"
+                onChange={handleImageUpload}
+                ref={imageUploader}
+                style={{ display: "none" }}
+              />
+              <button
+                className="upload-btn"
+                onClick={() => imageUploader.current.click()}
+              >
+                <img src={cam} />
+              </button>
             </div>
             <h6 className="text-center text-dark font-weight-bold mt-1 mb-0 px-3">
               Omodunni Alake
